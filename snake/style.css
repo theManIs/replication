@@ -1,0 +1,23 @@
+body, html {width: 99%; height: 99%}
+@font-face {font-family: crash; src: url(crash.ttf);}
+#matrix {width: 600px; height: 600px; border-top: 1px solid #999; border-left: 1px solid #999;
+	margin: auto;}
+#matrix .cell {float: left; width: 29px; height: 29px; 
+	border-bottom: 1px solid #999; border-right: 1px solid #999;}
+.no-close .ui-dialog-titlebar-close {display: none;}
+#moreMatrix {margin: auto auto; width: 800px; height: 800px;}
+#moreMatrix > p {font-size: 40px; text-align: center;}
+.scoreUp {font-size: 40px; color: darkgreen;}
+.fastUp {font-size: 40px; color: darkred;}
+.boardScore {font-size: 40px; text-align: center;}
+#boardScore {font: 35px crash; margin: auto; width: 600px;}
+#boardScore td:nth-child(2) {text-align: left;}
+#boardScore td:nth-child(1) {width: 1px; }
+#boardScore tr:nth-child(2n) {background: rgb(47, 79, 79);}
+#boardScore th {background: grey; color: black;}
+.showScore {font: 40px crash}
+
+
+
+	/*Переопределяет начальные значения для свойств*/
+.small {font-size: 20px}
