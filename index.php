@@ -1,6 +1,6 @@
 <?php 
 function buildPage(){
-	$inc = file_get_contents('hole.html');
+	$inc = file_get_contents('vestibule.html');
 	include 'regular.php';
 }
 buildPage();
