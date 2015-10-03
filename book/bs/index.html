@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BootStrap</title>
+	<link href="../css/controller.css" rel="stylesheet" type="text/css">	
+	<script src="../css/dist/js/jq-214.js"></script>
+	<script src="../css/dist/js/bootstrap.min.js"></script>
+	<script src="../css/dist/js/modernizer.js"></script>
+	<style>
+	
+@media all and (min-width: 1200px) {
+	.navigation-side-h,
+	a[target=_self],
+	.primary-section > footer,
+	iframe[name=iframe-03] {
+		display: none;
+	}
+
+}
+
+@media all and (min-width: 900px) and (max-width: 1200px) {
+	.primary-section > footer,
+	.navigation-side {
+		display: none;
+	}
+	.primary-section > header,
+	.primary-section > footer {
+		width: 900px;
+	}
+
+}
+
+@media all and (min-width: 300px) and (max-width: 900px) {
+	.slave-section,
+	.primary-section > header,
+	.primary-section > footer,
+	.navigation-side-h,
+	.navigation-frame[name=iframe-01] {
+		display: none;
+	}
+	
+	.primary-section {
+		width: 300px;
+		height: 300px;
+	}
+	
+	.navigation-frame {
+		height: 500px;
+	}
+}
+	
+	
+</style>
+</head>
+<body class="b-gr">
+<section class="primary-section">
+
+<header>
+
+<div class="navbar">
+<div class="navbar-inner">
+
+	<ul class="nav nav-tabs">
+	<li class="divider-vertical"></li>
+	<li><a class="brand" href="#">Технологии BootStrap</a></li>
+	<li class="divider-vertical"></li>
+	<li><a href="index.html">Главная</a></li>
+	<li class="divider-vertical"></li>
+	<li>
+	<div class="dropdown">
+<a 	class="dropdown-toggle btn btn-primary" 
+	href="#" 
+	data-toggle="dropdown">
+	Список компонентов
+	<b class="caret"></b></a>
+	
+<ul class="dropdown-menu">
+<li><a target="iframe-02" href="./drop.html#dropdowns">Выпадающие списки</a></li>
+<li><a target="iframe-02" href="./drop.html#buttonGroups">Группы кнопок</a></li>
+<li><a target="iframe-02" href="./drop.html#buttonDropdowns">Выпадающие списки кнопок</a></li>
+<li><a target="iframe-02" href="./drop.html#navs">Навигация</a></li>
+<li><a target="iframe-02" href="./drop.html#navbar">Панель навигации</a></li>
+<li><a target="iframe-02" href="./drop.html#breadcrumbs">Навигационные цепочки</a></li>
+<li><a target="iframe-02" href="./drop.html#pagination">Разбиение на страницы</a></li>
+<li><a target="iframe-02" href="./drop.html#labels-badges">Ярлыки и бейджи</a></li>
+<li><a target="iframe-02" href="./drop.html#typography">Оформление</a></li>
+<li><a target="iframe-02" href="./drop.html#thumbnails">Миниатюры</a></li>
+<li><a target="iframe-02" href="./drop.html#alerts">Сообщения</a></li>
+<li><a target="iframe-02" href="./drop.html#progress">Индикатор процесса</a></li>
+<li><a target="iframe-02" href="./drop.html#misc">Дополнительно</a></li>
+</li>
+</ul></div></li>
+	<li class="divider-vertical"></li>
+	<li><div class="dropdown">
+<a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">
+Описание возможностей
+<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="button.html" target="iframe-02">Кнопки</a></li>
+<li><a href="image.html" target="iframe-02">Картинки</a></li>
+<li><a href="form.html" target="iframe-02">Формы</a></li>
+<li><a href="code.html" target="iframe-02">Код</a></li>
+<li><a href="typography.html" target="iframe-02">Оформление</a></li>
+<li><a href="tables.html" target="iframe-02">Таблицы</a></li>
+<li><a href="design.html" target="iframe-02">Адаптивный дизайн</a></li>
+<li><a href="layouts.html" target="iframe-02">Макеты</a></li>
+<li><a href="fluidsistem.html" target="iframe-02">Плавающая вёрстка</a></li>
+<li><a href="global.html" target="iframe-02">Основы</a></li>
+</ul>
+</div>
+	<li class="divider-vertical"></li>
+	<li><a href="index.html">Главная</a></li>
+	<li class="divider-vertical"></li>
+	<li><a href="#" class="brand">Технологии BootStrap</a></li>
+
+</ul>
+</div>
+</div>
+
+</header>
+
+<section class="slave-section">
+<header>
+
+<div class="btn-toolbar">
+<div class="btn-group">
+<a href="button.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-66-tag.png" title="Кнопки" id="img01">
+<span class="little">Кнопки</span></a>
+<a href="image.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-392-video-hd.png" title="Картинки">
+<span class="little">Картинки</span></a>
+<a href="form.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-387-log-in.png" title="Формы">
+<span class="little">Формы</span></a>
+<a href="code.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-461-blacksmith.png" title="Код">
+<span class="little">Код</span></a>
+<a href="typography.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-445-floppy-saved.png" title="Оформление">
+<span class="little">Оформл-е</span></a>
+<a href="tables.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-487-fit-frame-to-image.png" title="Таблицы">
+<span class="little">Таблицы</span></a>
+<a href="design.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-157-show-thumbnails.png" title="Дизайн">
+<span class="little">Дизайн</span></a>
+<a href="layouts.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-156-show-big-thumbnails.png" title="Макеты">
+<span class="little">Макеты</span></a>
+<a href="fluidsistem.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-158-show-thumbnails-with-lines.png" title="Вёрстка">
+<span class="little">Вёрстка</span></a>
+<a href="global.html" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-145-folder-open.png" title="Основы">
+<span class="little">Основы</span></a>
+
+
+<a href="./drop.html#dropdowns" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-31-pencil.png" title="Ниспадающий списки">
+<span class="little">Выпадающие</span></a>
+<a href="./drop.html#buttonGroups" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-24-magnet.png" title="Группы кнопок">
+<span class="little">Группы</span></a>
+<a href="./drop.html#buttonDropdowns" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-26-binoculars.png" title="Ниспадающие кнопки">
+<span class="little">Ниспадающие</span></a>
+<a href="./drop.html#navs" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-35-old-man.png" title="Навигация">
+<span class="little">Навигация</span></a>
+<a href="./drop.html#navbar" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-49-star-empty.png" title="Панель навигации">
+<span class="little">Панель</span></a>
+<a href="./drop.html#breadcrumbs" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-63-paperclip.png" title="Навигационные цепочки">
+<span class="little">Цепочки</span></a>
+<a href="./drop.html#pagination" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-69-ruler.png" title="Страницы">
+<span class="little">Страницы</span></a>
+<a href="./drop.html#labels-badges" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-59-truck.png" title="Ярлыки">
+<span class="little">Ярлыки</span></a>
+<a href="./drop.html#typography" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-45-keys.png" title="Оформление">
+<span class="little">Темы</span></a>
+<a href="./drop.html#thumbnails" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-53-eye-close.png" title="Миниатюры">
+<span class="little">Миниатюры</span></a>
+<a href="./drop.html#alerts" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-51-link.png" title="Сообщения">
+<span class="little">Сообщения</span></a>
+<a href="./drop.html#progress" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-80-signal.png" title="Индикаторы процесса">
+<span class="little">Индикаторы</span></a>
+<a href="./drop.html#misc" target="iframe-02" class="btn btn-default">
+<img src="../png/glyphicons-72-book.png" title="Дополнительно">
+<span class="little">Доп</span></a>
+<a href="https://github.com/twitter/bootstrap/zipball/master" download class="btn btn-primary">
+<img src="../png/glyphicons-415-disk-save.png" title="Скачать">
+<span class="little">Скачать</span></a>
+<a href="help.html" target="iframe-02" id="help911" class="btn btn-primary">
+<img src="../png/glyphicons-336-pushpin.png" title="Справочник">
+<span class="little">Справка</span></a>
+<a href="text.txt" download id="help921" class="btn btn-primary">
+<img src="../png/glyphicons-63-paperclip.png" title="Текст">
+<span class="little">Текст</span></a>
+
+</div>
+</div>
+</header>
+
+<section class="child-section">
+
+<iframe class="navigation-frame" src="sample.html" seamless name="iframe-02"></iframe>
+
+</section>
+</section>
+<footer>
+
+</footer>
+
+</section>
+</body>
+</html>

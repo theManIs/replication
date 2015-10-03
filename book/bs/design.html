@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BootStrap</title>
+	<link href="../css/controller.css" rel="stylesheet" type="text/css">	
+	<script src="../css/dist/js/jq-214.js"></script>
+	<script src="../css/dist/js/bootstrap.min.js"></script>
+	<script src="../css/dist/js/modernizer.js"></script>
+</head>
+<body>
+<section class="section-bar">
+<h3 class="head-header">Адаптивный дизайн</h3>
+ 
+<h2 class="head-header">Включение адаптивных возможностей</h2>
+<p>Включите в вашем проекте адаптивный CSS, добавляя соответствующие мета теги и дополнительные таблицы стилей в <code>&lt;head&gt;</code> вашего документа. Если у вас компилированный Bootstrap, загруженный с нашей страницы, то вам всего лишь нужно добавить мета тег.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;meta</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">name</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"viewport"</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">content</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"width=device-width, initial-scale=1.0"</span></span><span class="tag"><span class="tag">&gt;</span></span></li><li class="L1"><span class="tag"><span class="tag">&lt;link</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">href</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"assets/css/bootstrap-responsive.css"</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">rel</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"stylesheet"</span></span><span class="tag"><span class="tag">&gt;</span></span></li></ol></li></ol></pre>
+<p><span class="label label-info">Внимание!</span> По умолчанию в Bootstrap не включены адаптивные возможности, поскольку это не везде требуется. Вместо того, чтобы разработчики каждый раз отключали этот функционал, логичнее будет дать им возможность включать его при необходимости.</p>
+<h2>Об адаптивных особенностях Bootstrap</h2>
+<p>          <img src="/wp-includes/images/assets/img/responsive-illustrations.png" alt="Responsive devices" style="float: right; margin: 0 0 20px 20px;"></p>
+<p>Медиа запросы изменяют обычный CSS, основанный на большом количестве условий и соотношений, размеров, типов дисплея и пр., но чаще всего — на фокусе в пределах <code>min-width</code> и <code>max-width</code>.</p>
+<ul>
+<li>Изменяет ширину колонок в сетке</li>
+<li>Там, где это необходимо, выравнивает элементы вертикально вместо использования обтекания.</li>
+<li>Изменяет размер заголовков и текста для лучшего отображения в различных устройствах.</li>
+</ul>
+<p>Используйте адаптивные возможности Медиа-запросов только для создания мобильной версии сайта. Для крупных проектов мы рекомендуем создавать отдельную версию дизайна и сайта.</p>
+<h2>Поддерживаемые устройства</h2>
+<p>Bootstrap поддерживает несколько медиа-запросов в одном файле, что позволяет работать Вашему проекту на различных устройствах и с разными разрешениями экранов. Сюда относятся следующие устройства:</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>Категория</th>
+<th>Ширина макета</th>
+<th>Ширина колонок</th>
+<th>Отступ между колонками</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Большой дисплей</td>
+<td>1200px и более</td>
+<td>70px</td>
+<td>30px</td>
+</tr>
+<tr>
+<td>По умолчанию</td>
+<td>980px и более</td>
+<td>60px</td>
+<td>20px</td>
+</tr>
+<tr>
+<td>Портретные планшеты</td>
+<td>768px и более</td>
+<td>42px</td>
+<td>20px</td>
+</tr>
+<tr>
+<td>Планшеты</td>
+<td>767px и менее</td>
+<td class="muted" colspan="2">Плавающие колонки, без фиксированной ширины</td>
+</tr>
+<tr>
+<td>Смартфоны</td>
+<td>480px и менее</td>
+<td class="muted" colspan="2">Плавающие колонки, без фиксированной ширины</td>
+</tr>
+</tbody>
+</table>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="com"><span class="com">/* Large desktop */</span></span></li><li class="L1"><span class="lit"><span class="lit">@media</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">(</span></span><span class="pln"><span class="pln">min</span></span><span class="pun"><span class="pun">-</span></span><span class="pln"><span class="pln">width</span></span><span class="pun"><span class="pun">:</span></span><span class="pln"><span class="pln"> </span></span><span class="lit"><span class="lit">1200px</span></span><span class="pun"><span class="pun">)</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">...</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">}</span></span></li><li class="L2"><span class="pln"><span class="pln">&nbsp;</span></span></li><li class="L3"><span class="com"><span class="com">/* Portrait tablet to landscape and desktop */</span></span></li><li class="L4"><span class="lit"><span class="lit">@media</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">(</span></span><span class="pln"><span class="pln">min</span></span><span class="pun"><span class="pun">-</span></span><span class="pln"><span class="pln">width</span></span><span class="pun"><span class="pun">:</span></span><span class="pln"><span class="pln"> </span></span><span class="lit"><span class="lit">768px</span></span><span class="pun"><span class="pun">)</span></span><span class="pln"><span class="pln"> </span></span><span class="kwd"><span class="kwd">and</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">(</span></span><span class="pln"><span class="pln">max</span></span><span class="pun"><span class="pun">-</span></span><span class="pln"><span class="pln">width</span></span><span class="pun"><span class="pun">:</span></span><span class="pln"><span class="pln"> </span></span><span class="lit"><span class="lit">979px</span></span><span class="pun"><span class="pun">)</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">...</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">}</span></span></li><li class="L5"><span class="pln"><span class="pln">&nbsp;</span></span></li><li class="L6"><span class="com"><span class="com">/* Landscape phone to portrait tablet */</span></span></li><li class="L7"><span class="lit"><span class="lit">@media</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">(</span></span><span class="pln"><span class="pln">max</span></span><span class="pun"><span class="pun">-</span></span><span class="pln"><span class="pln">width</span></span><span class="pun"><span class="pun">:</span></span><span class="pln"><span class="pln"> </span></span><span class="lit"><span class="lit">767px</span></span><span class="pun"><span class="pun">)</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">...</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">}</span></span></li><li class="L8"><span class="pln"><span class="pln">&nbsp;</span></span></li><li class="L9"><span class="com"><span class="com">/* Landscape phones and down */</span></span></li><li class="L0"><span class="lit"><span class="lit">@media</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">(</span></span><span class="pln"><span class="pln">max</span></span><span class="pun"><span class="pun">-</span></span><span class="pln"><span class="pln">width</span></span><span class="pun"><span class="pun">:</span></span><span class="pln"><span class="pln"> </span></span><span class="lit"><span class="lit">480px</span></span><span class="pun"><span class="pun">)</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">...</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">}</span></span></li></ol></li></ol></pre>
+<h2>Дополнительные адаптивные классы</h2>
+<p>Показанная здесь таблица классов обеспечивает динамику для различных устройств и их работу в связке с сеткой макета и медиа-запросами (разделено по устройствам). Данные классы  вы можете найти в <code>responsive.less</code>.</p>
+<table class="table table-bordered table-striped responsive-utilities">
+<thead>
+<tr>
+<th>Класс</th>
+<th>Телефоны <small>767px и менее</small></th>
+<th>Планшеты <small>979px to 768px</small></th>
+<th>Ноутбуки и десктопы <small>По умолчанию</small></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><code>.visible-phone</code></th>
+<td class="is-visible">Виден</td>
+<td class="is-hidden">Скрыт</td>
+<td class="is-hidden">Скрыт</td>
+</tr>
+<tr>
+<th><code>.visible-tablet</code></th>
+<td class="is-hidden">Скрыт</td>
+<td class="is-visible">Виден</td>
+<td class="is-hidden">Скрыт</td>
+</tr>
+<tr>
+<th><code>.visible-desktop</code></th>
+<td class="is-hidden">Скрыт</td>
+<td class="is-hidden">Скрыт</td>
+<td class="is-visible">Виден</td>
+</tr>
+<tr>
+<th><code>.hidden-phone</code></th>
+<td class="is-hidden">Скрыт</td>
+<td class="is-visible">Виден</td>
+<td class="is-visible">Виден</td>
+</tr>
+<tr>
+<th><code>.hidden-tablet</code></th>
+<td class="is-visible">Виден</td>
+<td class="is-hidden">Скрыт</td>
+<td class="is-visible">Виден</td>
+</tr>
+<tr>
+<th><code>.hidden-desktop</code></th>
+<td class="is-visible">Виден</td>
+<td class="is-visible">Виден</td>
+<td class="is-hidden">Скрыт</td>
+</tr>
+</tbody>
+</table>
+<h3>Когда использовать?</h3>
+<p>Используйте ограниченный функционал и избегайте создания совершенно различных версий на одном сайте. Вместо этого используйте данные возможности для создания разных презентаций на разных устройствах.</p>
+<h3>Тестирование адаптивных классов</h3>
+<p>Измените размер окна в вашем браузере или запустите сайт на других устройствах для тестирования адаптивные классов.</p>
+<h4>Виден на…</h4>
+<p>Зеленые отметки обозначают, что класс виден на данном дисплее.</p>
+<ul class="responsive-utilities-test">
+<li>Телефон<span class="visible-phone">? Телефон</span></li>
+<li>Планшет<span class="visible-tablet">? Планшет</span></li>
+<li>Десктоп<span class="visible-desktop">? Десктоп</span></li>
+</ul>
+<h4>Скрыт на…</h4>
+<p>В этом случае зеленые отметки обозначают, что класс не отображается на данном дисплее.</p>
+<ul class="responsive-utilities-test hidden-on">
+<li>Телефон<span class="hidden-phone">? Телефон</span></li>
+<li>Планшет<span class="hidden-tablet">? Планшет</span></li>
+<li>Десктоп<span class="hidden-desktop">? Десктоп</span></li>
+</ul>
+
+
+</section>
+</body>
+</html>

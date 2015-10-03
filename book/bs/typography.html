@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BootStrap</title>
+	<link href="../css/controller.css" rel="stylesheet" type="text/css">	
+	<script src="../css/dist/js/jq-214.js"></script>
+	<script src="../css/dist/js/bootstrap.min.js"></script>
+	<script src="../css/dist/js/modernizer.js"></script>
+</head>
+<body>
+<section class="section-bar">
+<h3 class="head-header">Оформление</h3>
+ 
+
+<h2 id="headings">Заголовки</h2>
+<p>Доступны все HTML заголовки, от <code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>.</p>
+<div class="bs-docs-example">
+<h1>h1. Заголовок 1</h1>
+<h2>h2. Заголовок 2</h2>
+<h3>h3. Заголовок 3</h3>
+<h4>h4. Заголовок 4</h4>
+<h5>h5. Заголовок 5</h5>
+<h6>h6. Заголовок 6</h6>
+<p></p></div>
+<h2 id="body-copy">Размеры Body</h2>
+<p>В Bootstrap основной размер шрифта <code>font-size</code> по умолчанию <strong>14px</strong>, с высотой строки <code>line-height</code> в <strong>20px</strong>. Это применимо к <code>&lt;body&gt;</code> и всем остальным абзацам. Дополнительно <code>&lt;p&gt;</code> (абзац) имеет нижний отступ, равный половине высоты его строки (по умолчанию 10px).</p>
+<div class="bs-docs-example">
+<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+<p></p></div>
+<pre class="prettyprint"><span class="tag"><span class="tag">&lt;p&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></pre>
+<h3>Класс Lead body</h3>
+<p>Выделяйте абзац путем добавления <code>.lead</code>.</p>
+<div class="bs-docs-example">
+<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+<p></p></div>
+<pre class="prettyprint"><span class="tag"><span class="tag">&lt;p</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"lead"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></pre>
+<h3>Форматирование Less</h3>
+<p>Все шрифты и размеры основаны на двух переменных LESS в <strong>variables.less</strong>: <code>@baseFontSize</code> и <code>@baseLineHeight</code>. Первая — это основной размер шрифта, используемый во всем документе, вторая — это основная высота строки. Мы используем эти переменные и немного вычислений, чтобы создать отступы, поля, высоту строк разного типа и многое другое. Настраивайте Bootstrap для себя.</p>
+<hr class="bs-docs-separator">
+<h2 id="emphasis">Выделение</h2>
+<p>Используя простые стили Bootstrap, применяйте HTML теги для выделения.</p>
+<h3><code>&lt;small&gt;</code></h3>
+<p>Для выделения блоков текста мелким шрифтом <small>используйте тег small.</small></p>
+<div class="bs-docs-example">
+<p><small>Эта строка текста предназначена для того, чтобы показать, как выглядит мелкий шрифт</small></p>
+<p></p></div>
+<pre class="prettyprint"><span class="tag"><span class="tag">&lt;p&gt;</span></span><span class="pln"><span class="pln">
+  </span></span><span class="tag"><span class="tag">&lt;small&gt;</span></span><span class="pln"><span class="pln">Эта строка текста предназначена для того, чтобы показать, как выглядит мелкий шрифт.</span></span><span class="tag"><span class="tag">&lt;/small&gt;</span></span><span class="pln"><span class="pln">
+</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></pre>
+<h3>Полужирный</h3>
+<p>Выделение фрагмента текста с помощью <strong>important</strong></p>
+<div class="bs-docs-example">
+<p>Следующий фрагмент текста <strong>набран полужирным шрифтом</strong>.</p>
+<p></p></div>
+<pre class="prettyprint"><span class="tag"><span class="tag">&lt;strong&gt;</span></span><span class="pln"><span class="pln">набран полужирным шрифтом</span></span><span class="tag"><span class="tag">&lt;/strong&gt;</span></span></pre>
+<h3>Курсив</h3>
+<p>Выделение фрагмента текста с помощью <em>stress</em></p>
+<div class="bs-docs-example">
+<p>Следующий фрагмент текста <em>выделен курсивом</em>.</p>
+<p></p></div>
+<pre class="prettyprint"><span class="tag"><span class="tag">&lt;em&gt;</span></span><span class="pln"><span class="pln">выделен курсивом</span></span><span class="tag"><span class="tag">&lt;/em&gt;</span></span></pre>
+<p><span class="label label-info">Внимание!</span> Смело используйте <code>&lt;b&gt;</code> и <code>&lt;i&gt;</code> в HTML5. Но <code>&lt;b&gt;</code> предназначен для выделения слова или фразы, которое не выражает особой важности, в то время как <code>&lt;i&gt;</code> используется для выделения разговорной речи, технических терминов и т.д.</p>
+<h3>Классы выделения</h3>
+<p>Выделение цветом с помощью нескольких вспомогательных классов.</p>
+<div class="bs-docs-example">
+<p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+<p></p></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;p</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"muted"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></li><li class="L1"><span class="tag"><span class="tag">&lt;p</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"text-warning"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">Etiam porta sem malesuada magna mollis euismod.</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></li><li class="L2"><span class="tag"><span class="tag">&lt;p</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"text-error"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">Donec ullamcorper nulla non metus auctor fringilla.</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></li><li class="L3"><span class="tag"><span class="tag">&lt;p</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"text-info"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></li><li class="L4"><span class="tag"><span class="tag">&lt;p</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"text-success"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></li></ol></li></ol></pre>
+<hr class="bs-docs-separator">
+<h2 id="abbreviations">Аббревиатуры</h2>
+<p>Используйте элемент HTML <code>&lt;abbr&gt;</code> для аббревиатур. При этом наведите курсор на аббревиатуру, чтобы увидеть ее расшифровку. Аббревиатуры с атрибутом <code>title</code> выделены полупрозрачным подчеркиванием точками, а при длительном наведении курсора вы увидите знак вопроса и расшифровку аббревиатуры.</p>
+<h3><code>&lt;abbr&gt;</code></h3>
+<p>Чтобы показать расшифровку аббревиатуры при длительном наведении курсора, добавьте атрибут <code>title</code>.</p>
+<div class="bs-docs-example">
+<p>Аббревиатура слова «attribute» — <abbr title="attribute">attr</abbr>.</p>
+<p></p></div>
+<pre class="prettyprint"><span class="tag"><span class="tag">&lt;abbr</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">title</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"attribute"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">attr</span></span><span class="tag"><span class="tag">&lt;/abbr&gt;</span></span></pre>
+<h3><code>&lt;abbr class="initialism"&gt;</code></h3>
+<p>Добавьте <code>.initialism</code>, чтобы немного уменьшить размер шрифта.</p>
+<div class="bs-docs-example">
+<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> — это круче вареного яйца.</p>
+<p></p></div>
+<pre class="prettyprint"><span class="tag"><span class="tag">&lt;abbr</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">title</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"HyperText Markup Language"</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"initialism"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">HTML</span></span><span class="tag"><span class="tag">&lt;/abbr&gt;</span></span></pre>
+<hr class="bs-docs-separator">
+<h2 id="addresses">Адреса</h2>
+<p>Представьте или только основную или полную контактную информацию.</p>
+<h3><code>&lt;address&gt;</code></h3>
+<p>Сохраните форматирование, ставя в конце всех строк тег <code>&lt;br&gt;</code>.</p>
+<div class="bs-docs-example">
+<address>
+              <strong>Twitter, Inc.</strong><br>
+              795 Folsom Ave, Suite 600<br>
+              San Francisco, CA 94107<br>
+              <abbr title="Phone">P:</abbr> (123) 456-7890<br>
+            </address>
+<address>
+              <strong>Полное имя</strong><br>
+              <a href="mailto:#">first.last@gmail.com</a><br>
+            </address>
+<p></p></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;address&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;strong&gt;</span></span><span class="pln"><span class="pln">Twitter, Inc.</span></span><span class="tag"><span class="tag">&lt;/strong&gt;&lt;br&gt;</span></span></li><li class="L2"><span class="pln"><span class="pln">  795 Folsom Ave, Suite 600</span></span><span class="tag"><span class="tag">&lt;br&gt;</span></span></li><li class="L3"><span class="pln"><span class="pln">  San Francisco, CA 94107</span></span><span class="tag"><span class="tag">&lt;br&gt;</span></span></li><li class="L4"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;abbr</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">title</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"Phone"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">P:</span></span><span class="tag"><span class="tag">&lt;/abbr&gt;</span></span><span class="pln"><span class="pln"> (123) 456-7890</span></span></li><li class="L5"><span class="tag"><span class="tag">&lt;/address&gt;</span></span></li><li class="L6"><span class="pln"><span class="pln">&nbsp;</span></span></li><li class="L7"><span class="tag"><span class="tag">&lt;address&gt;</span></span></li><li class="L8"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;strong&gt;</span></span><span class="pln"><span class="pln">Full Name</span></span><span class="tag"><span class="tag">&lt;/strong&gt;&lt;br&gt;</span></span></li><li class="L9"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;a</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">href</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"mailto:#"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">first.last@gmail.com</span></span><span class="tag"><span class="tag">&lt;/a&gt;</span></span></li><li class="L0"><span class="tag"><span class="tag">&lt;/address&gt;</span></span></li></ol></li></ol></pre>
+<hr class="bs-docs-separator">
+<h2 id="blockquotes">Цитаты</h2>
+<p>Цитирование фрагментов текста из других источников.</p>
+<h3>Цитаты по умолчанию</h3>
+<p>Цитата <abbr title="HyperText Markup Language">HTML</abbr> ставится внутрь тега <code>&lt;blockquote&gt;</code>. Для однострочных цитат используйте тег <code>&lt;p&gt;</code>.</p>
+<div class="bs-docs-example">
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;blockquote&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;p&gt;</span></span><span class="pln"><span class="pln">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></li><li class="L2"><span class="tag"><span class="tag">&lt;/blockquote&gt;</span></span></li></ol></li></ol></pre>
+<h3>Опции цитирования</h3>
+<p>Простые изменения стиля и содержания в стандартных цитатах.</p>
+<h4>Указание источника</h4>
+<p>Добавьте тег <code>&lt;small&gt;</code> для указания на источник. Поместите название источника внутрь тега <code>&lt;cite&gt;</code>.</p>
+<div class="bs-docs-example">
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+<p>              <small>Кто-то очень известный в <cite title="Source Title">Названии источника</cite></small>
+            </p></blockquote></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;blockquote&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;p&gt;</span></span><span class="pln"><span class="pln">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</span></span><span class="tag"><span class="tag">&lt;/p&gt;</span></span></li><li class="L2"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;small&gt;</span></span><span class="pln"><span class="pln">Кто-то очень известный в </span></span><span class="tag"><span class="tag">&lt;cite</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">title</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"Source Title"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln">Названии источника</span></span><span class="tag"><span class="tag">&lt;/cite&gt;&lt;/small&gt;</span></span></li><li class="L3"><span class="tag"><span class="tag">&lt;/blockquote&gt;</span></span></li></ol></li></ol></pre>
+<h4>Альтернативное отображение</h4>
+<p>Используйте <code>.pull-right</code> для выравнивания текста по правую сторону.</p>
+<div class="bs-docs-example" style="overflow: hidden;">
+<blockquote class="pull-right">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+<p>              <small>Кто-то очень известный в <cite title="Source Title">Названии источника</cite></small>
+            </p></blockquote></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;blockquote</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"pull-right"</span></span><span class="tag"><span class="tag">&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  ...</span></span></li><li class="L2"><span class="tag"><span class="tag">&lt;/blockquote&gt;</span></span></li></ol></li></ol></pre>
+<hr class="bs-docs-separator">
+<p>          <!-- Lists --></p>
+<h2 id="lists">Списки</h2>
+<h3>Неупорядоченный</h3>
+<p>Список, в котором порядок явно <em>не</em> обозначен.</p>
+<div class="bs-docs-example">
+<ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit
+<ul>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;ul&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;li&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/li&gt;</span></span></li><li class="L2"><span class="tag"><span class="tag">&lt;/ul&gt;</span></span></li></ol></li></ol></pre>
+<h3>Упорядоченный</h3>
+<p>Список, в котором порядок четко <em>определен</em>.</p>
+<div class="bs-docs-example">
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;ol&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;li&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/li&gt;</span></span></li><li class="L2"><span class="tag"><span class="tag">&lt;/ol&gt;</span></span></li></ol></li></ol></pre>
+<h3>Не стилизованный</h3>
+<p>Список без <code>стиля</code> или без дополнительного левого поля.</p>
+<div class="bs-docs-example">
+<ul class="unstyled">
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit
+<ul>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;ul</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"unstyled"</span></span><span class="tag"><span class="tag">&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;li&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/li&gt;</span></span></li><li class="L2"><span class="tag"><span class="tag">&lt;/ul&gt;</span></span></li></ol></li></ol></pre>
+<h3>Описание</h3>
+<p>Список терминов с их сопутствующими описаниями.</p>
+<div class="bs-docs-example">
+<dl>
+<dt>Списки описаний</dt>
+<dd>Список описания идеально подходит для определения терминов.</dd>
+<dt>Euismod</dt>
+<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+<dt>Malesuada porta</dt>
+<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+</dl></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;dl&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;dt&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/dt&gt;</span></span></li><li class="L2"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;dd&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/dd&gt;</span></span></li><li class="L3"><span class="tag"><span class="tag">&lt;/dl&gt;</span></span></li></ol></li></ol></pre>
+<h4>Горизонтальный список описания</h4>
+<p>Выстраивает термины и описания <code>&lt;dl&gt;</code> в одну линию.</p>
+<div class="bs-docs-example">
+<dl class="dl-horizontal">
+<dt>Списки описания</dt>
+<dd>Список описания идеально подходит для обозначения терминов.</dd>
+<dt>Euismod</dt>
+<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+<dt>Malesuada porta</dt>
+<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+<dt>Felis euismod semper eget lacinia</dt>
+<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+</dl></div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="tag"><span class="tag">&lt;dl</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">class</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"dl-horizontal"</span></span><span class="tag"><span class="tag">&gt;</span></span></li><li class="L1"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;dt&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/dt&gt;</span></span></li><li class="L2"><span class="pln"><span class="pln">  </span></span><span class="tag"><span class="tag">&lt;dd&gt;</span></span><span class="pln"><span class="pln">...</span></span><span class="tag"><span class="tag">&lt;/dd&gt;</span></span></li><li class="L3"><span class="tag"><span class="tag">&lt;/dl&gt;</span></span></li></ol></li></ol></pre>
+<p>
+          <span class="label label-info">Внимание!</span> В горизонтальных списках описания слишком длинные термины будут обрезаться с помощью <code>text-overflow</code>. На малых дисплеях размеры списков будут изменяться в соответствии с сеткой шаблона.
+        </p>
+</section>
+
+
+
+</section>
+</body>
+</html>
