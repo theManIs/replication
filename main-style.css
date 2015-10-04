@@ -3,13 +3,14 @@
 	left, black 0%, darkblue 50%, darkblue 50%, black 100%);}
 #myBody {background: -moz-linear-gradient(
 	left, black 0%, darkblue 50%, darkblue 50%, black 100%);}
-#iconSnake {border-radius: 30% 30%;}
-#namePerson {position: absolute;}
-#namePerson, #snakeAnnounce {display: none;}
-#calendarAnnounce, #snakeAnnounce
-	{font-size: 30px; line-height: 25px; color: grey; display: none;}
-#iconSnake, #snakeAnnounce, #iconCalendar, #calendarAnnounce, .divCover
-	{width: 300px; float: left;}
+#myBody {text-align: center; padding: 10%;}
+#namePerson {position: relative; display: none;}
+#calendarAnnounce, #snakeAnnounce, #paragraphBooks
+	{font-size: 30px; line-height: 25px; color: white; display: none;}
+#iconSnake, #snakeAnnounce, #iconCalendar, #calendarAnnounce, #divBooks, #divSnake, #divCalendar
+	{width: 300px;}
 #sectionSnake, #sectionCalendar {display: block;}
-#myBody {text-align: center; padding: 10%}
-#calendarAnnounce, #snakeAnnounce {padding: 100px;}
+#sectionCalendar, #sectionSnake, #sectionBooks {display: inline-block; vertical-align: top;}
+#paragraphBooks {width: 300px;}
+.ui-autocomplete {text-align: left;}
+.animateIcon {cursor: pointer}
