@@ -3,5 +3,6 @@ $(document).ready(function(){
 	$.get('snakeScript.js');
 	$.get('iconMove.js');
 	$.get('booksScript.js');
+	$.get('blogScript.js');
 });
 
