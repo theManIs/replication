@@ -1,6 +1,7 @@
 AuthType Basic
 AuthName "Message for access"
-AuthUserFile C:/data/xampp/htdocs/blog/.htpasswd
+#AuthUserFile C:/data/xampp/htdocs/blog/admin/.htpasswd
+AuthUserFile /home/blog/admin/.htpasswd
 Require valid-user
 
 

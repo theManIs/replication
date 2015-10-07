@@ -4,5 +4,4 @@ function buildPage(){
 	include 'regular.php';
 }
 buildPage();
-//echo 'fuck';
 ?>
