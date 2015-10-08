@@ -4,7 +4,7 @@ class V_buildPage extends C_base
 	public function getPage(){
 		parent::initialize(['reference']);
 		switch($this->reference) {
-			case 'default':
+			case 'write':
 				self::write();
 				break;
 			case 'redact':

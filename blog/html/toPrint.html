@@ -1,4 +1,31 @@
-<body>
-	<p><a href="admin/" target="_self" class="btn">Для администратора</a></p>
-	<?=$tmp?>
-</body>
+<div class="navbar">
+	<ul class="nav">
+		<li class="active">
+			<a href="admin/" target="_self" class="btn">Для администратора
+			<i class="icon-arrow-left"></i></a>
+		</li>
+	</ul>
+</div>
+<div>
+	<p class="topPanel">
+		На данном сайте могут быть вывешены разные сообщения о многих 
+		вещах, за которые создатель	блога, разумеется, не несёт никакой 
+		ответственности ни перед законом, ни перед богом.
+	</p>
+	<hr>
+</div>
+<div>
+	<h1 class="mTitle">Блог о новостях в блоге</h1>
+	<h3 class="mDate"><?php echo date('Y M d'); ?></h3>
+	<img alt="image" src="pic/important.jpg" id="importantI" title="I">
+	<hr>
+</div>
+<?=$tmp?>
+<div class="hero-unit">
+	<h1>Обратиться к создателю!</h1>
+	<p>Самое важное знать, кто создал всё это</p>
+	<p><a class="btn btn-primary">Узнать кто такой создатель...</a></p>
+	<p>Адреса, явки, пароли и копирайт &copy;<?=date('Y')?></p>
+</div>
+<div title="У вас вопрос к создателю?" id="call">Создатель принимает почту по адресу: 
+<address>lostlose@yandex.ru</address></div>

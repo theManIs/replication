@@ -30,19 +30,15 @@ class M_manageDocument extends C_base
 	
 	public function toPrint()
 	{
-		$data = (new M_dataBase())->getData('notes/*');
-		$eTable = new V_easyTable($data);
-		$eTable->tCaption('Все статьи в блоге');
-		$eTable->tHead(['Дата', 'Название', 'Содержание', 'Автор']);
-		$eTable->tBody([0, 1, 2, 3]);
-		self::$scalar = $eTable->getHTML();
+		
+		self::$scalar = V_requestHTML::blockDoc();
 	}
 	
 	public function redact()
 	{
-		$col4 = '<button name="delete" value="delete"
+		$col4 = '<button name="delete" value="delete" class="btn btn-danger"
 			form="deleteForm" type="submit">Удалить</button>';
-		$col5 = '<button name="update" value="update"
+		$col5 = '<button name="update" value="update" class="btn btn-warning"
 			form="updateForm" type="submit">Редактировать</button>';
 		$data = (new M_dataBase())->getData('notes/*');
 		$eTable = new V_easyTable($data);
