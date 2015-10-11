@@ -13,7 +13,7 @@ body {background-color: #161616; padding-left: 25%; padding-right: 25%;}
 .secAdd, .secRed {color: white;}
 .secAdd a, .secRed caption, .yeasturday {font-size: 30px;}
 .secRed td {padding: 3px;}
-#importantI {width: 80%; margin: 10px 10%;}
+#importantI {width: 50%; margin: 10px 25%;}
 .boxY {padding: 0 5%;}
 .no-close, .ui-dialog-titlebar-close {display: none;}
 .dialog {display: none; font-size: 13px;}
