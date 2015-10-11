@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/prettyPhoto.css">
-
+	
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="css/ie.css">
     <![endif]-->
@@ -52,7 +52,11 @@
 
     <!-- Uncomment the following line for your custom stylesheet -->
     <!-- <link rel="stylesheet" href="css/custom.css"> -->
-	
+	<script>
+		
+		$('img[alt=certificate]').click(function(){$('body').append($('<img>').attr('class', 'cert').css({"width" : "1000px", "position" : "fixed", "left": "20%", "top":"20%", "z-index": "10"}).attr("src", $(this).attr("src")));$('#main').add('#bg').css({"opacity":".5"});});
+		$('body').on('click', '.cert', function(){$('.cert').click(function(){$(this).remove(); $('#main').add('#bg').css({"opacity":"1"});});});
+	</script>
 </head>
 <body>
 
@@ -175,7 +179,7 @@
 							
                                 <!--<li><a href="blog.html">Биография</a></li>-->
                                 <li><a href="team.html">Фото</a></li>
-                                <!--<li><a href="awards.html">Сертификаты</a></li>-->
+                                <li><a href="awards.html">Сертификаты</a></li>
                                 <li><a href="mission.html">Философия</a></li>
                             </ul>
                         </div>
@@ -291,7 +295,6 @@
 	src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script src="js/audiojs/audio.min.js"></script>-->
 <script src="js/jquery.plugins.js"></script>
-<script src="js/js/main-script.js" language="javascript"></script>
 <!-- AddThis API Widget. Uncomment the row below and put data-addthis in the project page to "true", use your userid below. -->
 <!--<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=YOURUSERID"></script> -->
 
