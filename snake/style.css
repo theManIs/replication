@@ -1,4 +1,4 @@
-body, html {width: 99%; height: 99%}
+body, html {width: 99%; height: 99%;}
 @font-face {font-family: crash; src: url(crash.ttf);}
 #matrix {width: 600px; height: 600px; border-top: 1px solid #999; border-left: 1px solid #999;
 	margin: auto;}
@@ -16,8 +16,13 @@ body, html {width: 99%; height: 99%}
 #boardScore tr:nth-child(2n) {background: rgb(47, 79, 79);}
 #boardScore th {background: grey; color: black;}
 .showScore {font: 40px crash}
-
-
-
-	/*Переопределяет начальные значения для свойств*/
 .small {font-size: 20px}
+
+
+.e1 {background: gainsboro;}
+.e2 {background: silver;}
+.e3 {background: gray;}
+.e4 {background: darkslategray;}
+.post {padding: 80px 50px; font-size: 40px; line-height: 32px;}
+#namePerson {transform: scale(2, 2); padding: 10% 0 0 30%; }
+.pSerpent {margin: 5% 0 0 30%; width: 300px; border-radius: 30%;}

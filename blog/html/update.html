@@ -1,0 +1,14 @@
+<section>
+	<h3>Блог</h3>
+	<em>Страница добавления статей<em><br>
+	<a href="?reference=redact" target="_self">Вернуться к списку статей</a>
+	<form method="POST" action="?reference=redact">
+		<caption>Дата предыдущей редакции <?=$tmp[0]?></caption>
+		<label>В названии можно использовать любые буквы, цифры и символы<br>
+		<input type="text" value="<?=$tmp[1]?>" name="head"></label>
+		<textarea name="body"><?=$tmp[2]?></textarea>
+		<label>Любой автор должен оставить своё имя для истории<br>
+		<input type="text" value="<?=$tmp[3]?>" name="author"></label>
+		<button class="btn" name="add" value="add">Отправить статью</button>
+	</form>
+</section>
