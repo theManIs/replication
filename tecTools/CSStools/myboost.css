@@ -1,0 +1,153 @@
+@-webkit-keyframes gr-l {
+
+	0% {background-color: darkslategray;}
+	33% {background-color: darkolivegreen;}
+	66% {background-color: midnightblue;}
+	100% {background-color: brown;}
+}
+
+@keyframes gr-l,
+ {
+	0% {background-color: darkslategray;}
+	33% {background-color: darkolivegreen;}
+	66% {background-color: midnightblue;}
+	100% {background-color: brown;}
+}
+
+.b-gr {
+
+	-webkit-animation: gr-l 10s linear 0s infinite alternate;
+	animation-name: gr-l;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.red-white {
+	font-size: 25px;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	background: linear-gradient(
+	45deg,
+	white 0%,
+	white 5%,
+	darkred 5%,
+	darkred 95%,
+	white 95%,
+	white 100%);
+	border-radius: 10px 0;
+	box-sizing: border-box;
+	border: 1px solid white;
+	margin: 5px auto;
+	max-width: 280px;
+}
+	
+.red-white:hover {
+	background-image: linear-gradient(
+	45deg,
+	white 0%,
+	white 25%,
+	darkred 25%,
+	darkred 50%,
+	white 50%,
+	white 75%,
+	darkred 75%,
+	darkred 100%);
+	background-size: 40px 40px;
+	background-repeat: repeat;
+	text-decoration: none;
+	color: black;
+}
+
+.red-white:active {
+	box-shadow:
+	inset 5px 5px 5px black,
+	inset -5px -5px 5px black;
+}
+
+.horisontal a {
+	text-decoration: none;
+	color: black;
+	transform: skew(30deg, 0deg);
+	display: inline-block;
+	transform: skew(30deg, 0deg);
+	
+}
+
+.horisontal{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.horisontal div {
+	display: inline-block;
+	transform: skew(-30deg, 0deg);	
+	width: 170px;
+	text-align: center;
+	background: red;
+	padding: 15px 0 0 10px;
+	font: 20px arial;
+	display: inline-block;
+	margin: 0 0px;
+	height: 40px;
+	border-radius: 0;
+	vertical-align: -40px;
+}
+
+.horisontal div:hover {
+	transform: 
+	scale(1,1.5)
+	skew(-30deg, 0deg);
+}
+
+/* Оформление таблиц */
+
+.original-table tr:nth-child(2n) {
+	background: rgba(0,0,0,.3);
+}
+
+.original-table tr:nth-child(2n):hover {
+	background: rgba(0,0,0,1);
+}
+
+.original-table tr:nth-child(2n-1) {
+	background: rgba(0,0,0,.6);
+}
+
+.original-table tr:nth-child(2n-1):hover {
+	background: rgba(0,0,0,1);
+}
+
+.original-table tr:first-child {
+	background: rgba(0,0,0,1);
+}
+
+.original-table {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: white;
+	cursor: default;
+}
+
+.original-table {
+	counter-reset: list 0;
+}
+
+.original-table tr:first-child:before {
+	content: "№";
+}
+
+.original-table tr:nth-child(n+2):before {
+	counter-increment: list;
+	content: counter(list);
+	width: 30px;
+	height: 100%;
+	display: inline;
+}
