@@ -52,7 +52,7 @@ input[type=password]:focus {
 	margin: 0;
 }
 input[name=registration],
-input[name=authorize] {
+button[name=action] {
 	width: 100px;
 	height: 35px;
 	font-size: 25px;

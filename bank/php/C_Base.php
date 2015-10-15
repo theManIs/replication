@@ -1,9 +1,9 @@
 <?php
 class C_Base
 {
-	public function getVars()
+	public function getVars($box)
 	{ 
-		foreach($_REQUEST as $k => $v) { 
+		foreach($box as $k => $v) { 
 			$v = htmlentities($v, ENT_QUOTES | ENT_DISALLOWED, 'UTF-8');
 			$this->$k = $v;
 		}
@@ -50,10 +50,14 @@ class C_Base
 	
 	public function auth()
 	{
-		self::initialize('login', 'pass', 'authorize');
-		$auth = new C_Auth($this->login, $this->pass, $this->authorize);
+		self::initialize('user', 'password', 'action');
+		$auth = new C_Auth($this->user, $this->password, $this->action);
 		$auth->control();
-		if ($auth->check) echo 'Авторизирован';
+		if ($auth->check === true) {
+			echo 'Авторизирован';
+		} else {
+			//echo 'Не авторизирован';
+		}
 	}
 	
 	public function before()

@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Устанавливаем индексный файл для директории
-DirectoryIndex index.php
+DirectoryIndex api.php
 
 # Путь до корня сайта
 RewriteBase /bank/
@@ -12,4 +12,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Правила изменения URL-адреса
-RewriteRule (.*) index.php?uri=$0 [L]
+#RewriteRule (.*) index.php?uri=$0 [L]
