@@ -54,7 +54,7 @@ class C_Base
 		$auth = new C_Auth($this->user, $this->password, $this->action);
 		$auth->control();
 		if ($auth->check === true) {
-			echo 'Авторизирован';
+			echo 'Очевидно, что вы теперь авторизированный пользователь.';
 		} else {
 			//echo 'Не авторизирован';
 		}

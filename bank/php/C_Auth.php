@@ -25,6 +25,8 @@ class C_Auth extends C_Base
 	{
 		if ($this->message) {
 			$this->message = 'Ваш аккаунт заблокирован на 3 минуты';
+		} else {
+			$this->message = 'Тестовая версия. <br>Логин и пароль: admin@bank.com 12345';
 		}
 		ob_start();
 		include 'html/auth.html';
