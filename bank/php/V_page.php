@@ -8,6 +8,7 @@ class V_page extends M_base
 		$this->user = $user;
 		$this->style = 'css/auth.css';
 		$this->title = 'Доступные запросы';
+		$this->json = json_encode([$user, $token]);
 		ob_start();
 		include 'html/noAction.html';;
 		$body = ob_get_clean();
@@ -20,6 +21,7 @@ class V_page extends M_base
 		$this->title = 'Операции';
 		$this->balance = $actual . ' &#8364;';
 		$this->lastOperations = $oprtns;
+		$this->json = json_encode($this->balance);
 		ob_start();
 		include 'html/main.html';;
 		$body = ob_get_clean();

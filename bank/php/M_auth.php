@@ -49,7 +49,7 @@ class M_auth extends M_base
 	{
 		$rules = '(EXTRACT(HOUR_SECOND FROM NOW())-EXTRACT(HOUR_SECOND FROM `timemark`))';
 		$release = M_sql::getSelf(M_access::getPDO());
-		$release->delete('pool')->where($rules)->sign('>')->bind('300');
+		$release->delete('pool')->where($rules)->sign('>')->bind('10');
 		$release->getDel();
 	}
 	

@@ -17,7 +17,7 @@ class v_auth
 			$this->message .= '<br>Логин и пароль: some any';
 			$this->message .= '<br>Логин и пароль: unknow unknow';
 		}
-		//$this->json = json_encode($this->message);
+		$this->json = json_encode($this->message);
 		ob_start();
 		include 'html/auth.html';
 		$body = ob_get_clean();

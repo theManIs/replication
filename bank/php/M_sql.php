@@ -138,9 +138,8 @@ class M_sql extends M_base
 	
 	public function getDel()
 	{
-		$sql = $this->delete . $this->where . ';';
-		self::taskBase($sql);
-		return;
+		$sql = $this->delete . $this->where . ';';		
+		return self::taskBase($sql)->rowCount();
 	}
 	
 	public function limit($limit)
