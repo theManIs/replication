@@ -12,7 +12,7 @@ $hour = new DateTime('now + 4 hour');
 //Динамическое подключение классов
 function __autoload($name) 
 {
-	include_once('php/'.$name.'.php');
+	include_once($name.'.php');
 }
 
 //Константы
