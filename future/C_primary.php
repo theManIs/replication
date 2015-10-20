@@ -9,20 +9,20 @@ class C_primary extends M_base
 	public function write()
 	{
 		if($this->action === 'submit' && self::what('s', $this->youName, $this->youComment)) {
-			$write = M_sql::con();
+			$write = M_sql::Q();
 			$write->insert('comments')->set('content', 'name');
 			$write->bind($this->youComment, $this->youName);
-			$write = $write->getInsert();
+			$write->send();
 		}
 	}
 	
 	public function read()
 	{
-		$read = M_sql::con();
+		$read = M_sql::Q();
 		$time = 'CONCAT(HOUR(`date`), ":",  MINUTE(`date`)) as time';
 		$date = 'CONCAT(DAY(`date`), ".",  MONTH(`date`), ".", YEAR(`date`)) as date';
 		$read->select("content, name, $time, $date")->from('comments')->limit('3');
-		return $read->order('id DESC')->getSelect();
+		return $read->order('id DESC')->send()->fetchAll();
 	}
 	
 	public function template($read)

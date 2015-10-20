@@ -4,9 +4,9 @@
 //define('USER', 'root');
 //define('PASSWORD', 'start');
 
-class MAccess
+class M_access
 {
-	private static $pdo = NULL;
+	private static $inst = NULL;
 	private function __construct() 
 	{
 		try	{
@@ -15,16 +15,16 @@ class MAccess
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$pdo->setAttribute(PDO::ATTR_ORACLE_NULLS, PDO::NULL_NATURAL);
 			$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-			$this->pdo = $pdo;
+			$this->pdo = $pdo; 
 		} catch(PDOException $e) {
 			exit($e->getMessage().'<br>'.$e->getTraceAsString());
 		}
 	}
-	public static function GetPDO()
+	public static function getPDO()
 	{
-		if (self::$pdo === NULL)
-			self::$pdo = new MAccess();
-		return self::$pdo;
+		if (self::$inst === NULL)
+			self::$inst = new M_access();
+		return self::$inst->pdo;
 	}
 }
 ?>

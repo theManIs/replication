@@ -1,7 +1,7 @@
 <?php 
 class M_sql extends M_base
 {
-	private $pdo;
+	public $pdo;
 	public $params = array();
 	public $sign = array();
 	public $marker = null;
@@ -13,18 +13,6 @@ class M_sql extends M_base
 		} catch(PDOException $e) {
 			exit($e->getMessage().' '.$e->getTraceAsString());
 		}
-	}
-	
-	public function getSelect()
-	{
-		$sql = $this->select . $this->from;
-		$sql .= isset($this->where) ? $this->where : '';
-		$sql .= isset($this->order) ? $this->order : '';
-		$sql .= isset($this->limit) ? $this->limit : '';
-		$sql .= ';';
-		$ask = self::taskBase($sql);
-		$ask = $ask->fetchAll();
-		return $ask;
 	}
 	
 	private function taskBase($sql)
@@ -105,12 +93,6 @@ class M_sql extends M_base
 		return $this->marker;
 	}
 	
-	public function getInvolved()
-	{
-		$sql = $this->update . $this->set . $this->where . ';'; 
-		self::taskBase($sql);
-	}
-	
 	public static function getSelf($pdo)
 	{
 		$itSelf = new M_sql($pdo);
@@ -123,24 +105,10 @@ class M_sql extends M_base
 		return $this->marker;
 	}
 	
-	public function getInsert()
-	{
-		$sql = $this->insert . $this->set . ';';
-		self::taskBase($sql);
-		return;
-	}
-	
 	public function delete($delete)
 	{
 		$this->delete = 'DELETE FROM ' . $delete;
 		return $this->marker;
-	}
-	
-	public function getDel()
-	{
-		$sql = $this->delete . $this->where . ';';
-		self::taskBase($sql);
-		return;
 	}
 	
 	public function limit($limit)
@@ -155,9 +123,25 @@ class M_sql extends M_base
 		return $this->marker;
 	}
 	
-	public static function con()
+	public static function Q()
 	{
 		return M_sql::getSelf(M_access::getPDO());
+	}
+	
+	public function send()
+	{
+		$sql = '';
+		$sql .= isset($this->update) ? $this->update : '';
+		$sql .= isset($this->insert) ? $this->insert : '';
+		$sql .= isset($this->delete) ? $this->delete : '';
+		$sql .= isset($this->select) ? $this->select : '';
+		$sql .= isset($this->set) ? $this->set : '';
+		$sql .= isset($this->from) ? $this->from : '';
+		$sql .= isset($this->where) ? $this->where : '';
+		$sql .= isset($this->order) ? $this->order : '';
+		$sql .= isset($this->limit) ? $this->limit : '';
+		$sql .= ';';
+		return self::taskBase($sql);
 	}
 }
 
