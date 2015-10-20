@@ -2,15 +2,15 @@
 class M_base
 {
 	public function getVars($box)
-	{
+	{ 
 		foreach($box as $k => $v) { 
 			$v = htmlentities($v, ENT_QUOTES | ENT_DISALLOWED, 'UTF-8');
 			$this->$k = $v;
 		}
 	}
 	
-	protected function initialize()
-	{
+	public function initialize()
+	{ 
 		for ($i = 0, $c = func_num_args(); $i < $c; $i++) {
 			$arg = func_get_arg($i);
 			if(!isset($this->$arg)) $this->$arg = null;
