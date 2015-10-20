@@ -12,20 +12,23 @@ $hour = new DateTime('now + 4 hour');
 //Динамическое подключение классов
 function __autoload($name) 
 {
-	include_once('php/'.$name.'.php');
+	include_once($name.'.php');
 }
 
 //Константы
-define('HOST', 'localhost');
-define('DB', 'bank');
-define('USER', 'pie');
-define('PASSWORD', 'pass');
-define('ROOTDIR', 'bank');
-//define('HOST', 'mysql.hostinger.ru');
-//define('DB', 'u421461657_bank');
-//define('USER', 'u421461657_pie');
-//define('PASSWORD', 'OKfS8OI31n');
+if ('localhost' === $_SERVER['HTTP_HOST']) {
+	define('HOST', 'localhost');
+	define('DB', 'future');
+	define('USER', 'moderator');
+	define('PASSWORD', 'somepass');
+} else {
+	define('HOST', 'mysql.hostinger.ru');
+	define('DB', 'u421461657_bank');
+	define('USER', 'u421461657_pie');
+	define('PASSWORD', 'OKfS8OI31n');
+}
 
+//Модуль тестирования
 /*print_r(date_default_timezone_get().' '.ini_get('error_log').' '.
 ini_get('error_reporting').' '.ini_get('default_charset').' '.
 mb_http_output().' '.setlocale(LC_ALL, NULL).' '.ini_get('display_errors')
