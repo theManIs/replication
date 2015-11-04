@@ -69,17 +69,20 @@ function toggle() {
 			lable.hidden = true;
 			feature.hidden = false;
 		};
-		lable.hidden = true;
-		setTimeout(function(){lable.hidden = false;features();}, 3000);
+		features();
 	}
-	if (feature)
+	if (feature) {
 		feature.hidden = true;
+		setTimeout(function(){feature.hidden = false;lable.hidden = true;}, 4000);
+	}
 	if (clsr) {
 		clsr.onclick = function() {
 			feature.hidden = true;
 			lable.hidden = false;
 		}
 	}
+	if (R('.callkeeperBillboard'))
+		R('.callkeeperBillboard').hidden = true;
 	if (send) {
 		send.onclick = function() {
 			feature.hidden = true;
@@ -94,7 +97,9 @@ function toggle() {
 			request = request + '&write=true';
 			point = cRec('GET', request);
 			point.onload = function(){
-				alert(this.responseText);
+				R('.callkeeperBillboard').hidden = false;
+				setTimeout(function(){R('.callkeeperBillboard').hidden = true;}, 2000);
+				//alert(this.responseText);
 			}
 		}
 	}
@@ -102,6 +107,7 @@ function toggle() {
 
 /*Производит кросс-доменный GET-запрос*/
 function cRec(method, request) {
+	request = request + '?noCache=' + (new Date()).getTime();
 	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 	var xhr = new XHR();
 	xhr.open(method, request, true);
@@ -118,12 +124,13 @@ function cRec(method, request) {
 /*Управляет некоторыми настройками*/
 function features() {
 	R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;
+	R('.callkeeperBillboard').style.marginTop = window.innerHeight/2 - R('.callkeeperBillboard').offsetHeight/2;
 }
 
 
 
 /*Получает стили виджета*/
-(function() {
+/*(function() {
 	rec2 = cRec('GET', linkStyle);
 	rec2.onload = function() {
 		data = rec2.responseText;
@@ -131,7 +138,7 @@ function features() {
 		widget.innerHTML = data;
 		document.head.appendChild(widget);
 	};
-})();
+})();*/
 
 /*Получает гипертекст виджета*/
 /*Основная управляющая функция*/

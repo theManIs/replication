@@ -1,5 +1,6 @@
 /*Производит кросс-доменный GET-запрос*/
 function get(request) {
+	request = request + '?noCache=' + (new Date()).getTime();
 	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 	var xhr = new XHR();
 	xhr.open(request, true);
