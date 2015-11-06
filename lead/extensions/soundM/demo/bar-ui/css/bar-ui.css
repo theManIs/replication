@@ -592,6 +592,17 @@
  background-position: 50% 50%;
 }
 
+/*
+.sm2-inline-button.close
+{
+	width: 42;
+	height: 42;
+	background-image: url(../image/close.png);
+	background-size: 45%;
+	background-position: 50% 50%;
+}
+*/
+
 .repeat {
  background-image: url(../image/icomoon/entypo-25px-ffffff/PNG/loop.png);
  background-image: none, url(../image/icomoon/entypo-25px-ffffff/SVG/loop.svg);
