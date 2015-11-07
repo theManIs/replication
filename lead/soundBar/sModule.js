@@ -1,11 +1,9 @@
-const DEBUG = true;
+
 supportFunction = {
 	lightRow: function(i, sound) {
 		var recordname = $(sound[i]).attr('recordname');			
 		$('tr.success').removeClass('success');				
 		$('*[recordname="' + recordname + '"').parent().parent().addClass('success');
-		if (DEBUG === true)
-			console.log(i + ' ' + sound + ' ' + recordname);
 	},
 	clickPlaylist: function(i, sound) {		
 		$($($('.sm2-playlist-bd')[1]).find('a')[i]).click(function() {
@@ -20,7 +18,7 @@ supportFunction = {
 			sm2BarPlayers[0].playlistController.playItemByOffset(i + 1);
 		});
 	},
-	buildPlaylist: function(i, sound) {		
+	buildPlaylist: function(i, sound) {
 		var recordname = $(sound[i]).attr('recordname');
 		var newS = $('<li>').append($('<a>').attr('href', sound[i].href).text(recordname));
 		$($('.sm2-playlist-bd')[1]).append(newS);
@@ -47,21 +45,24 @@ supportFunction = {
 			next = (side === 'next') ? next + 1 : next - 1;
 			var recordname = $(sound[next]).attr('recordname');
 			$('*[recordname="' + recordname + '"').parent().parent().addClass('success');
-			if (DEBUG === true)
-				console.log('the: ' + the + ' side: ' + side +
-					' sound: ' + sound + ' recordname: ' + recordname + ' next: ' + next);
 			return true;
 		});
 	},
-}
-$(document).ready(function() {
-	var sound = $('a[href$=".mp3"].playlink');
-	for (i = 0, c = sound.length; i < c; i++) {
-		supportFunction.buildPlaylist(i, sound);
-		supportFunction.clickPlaylist(i, sound);
-		supportFunction.clickMp3(i, sound);
-	}
-	supportFunction.nextStep(sound);
-	supportFunction.clickClose();
-	$('.sm2-bar-ui').css('display', 'none');
+	controller: function() {
+		var sound = $('a[href$=".mp3"].playlink');
+		for (i = 0, c = sound.length; i < c; i++) {
+			supportFunction.buildPlaylist(i, sound);
+			supportFunction.clickPlaylist(i, sound);
+			supportFunction.clickMp3(i, sound);
+		}
+		supportFunction.nextStep(sound);
+		supportFunction.clickClose();
+		$('.sm2-bar-ui').css('display', 'none');
+	},
+};
+
+/*
+$(document).ready(function() {	
+	supportFunction.controller();
 });
+*/
