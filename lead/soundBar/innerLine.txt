@@ -1,0 +1,2 @@
+#Комментарии нужно заменить на директорию хранения файла "sLoader.js"
+<script language="javascript" src="/*Директория*/sLoader.js"></script>
