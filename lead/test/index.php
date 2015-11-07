@@ -6,16 +6,16 @@
 	<script language="javascript" src="../extensions/jqui/jquery.js"></script>
 	<script language="javascript" src="../extensions/jqui/jquery-ui.min.js"></script>
 	<script language="javascript" src="../extensions/bootstrap/js/bootstrap.min.js"></script>
-	<script language="javascript" src="../soundBar/sm2.min.js"></script>
+	<!--<script language="javascript" src="../soundBar/sm2.min.js"></script>
 	<script language="javascript" src="../soundBar/script/bar-ui.js"></script>
-	<script language="javascript" src="../soundBar/sModule.js"></script>
-	<!--<script language="javascript" src="../soundBar/sManager.js"></script>-->
+	<script language="javascript" src="../soundBar/sModule.js"></script>-->
+	<script language="javascript" src="../soundBar/sManager.js"></script>
 	<!-- -->
 	<!--<script language="javascript" src="../soundBar/sLoader.js"></script>-->
 	<!-- -->
-	<link rel="stylesheet" href="../soundBar/css/bar-ui.css">
-	<link rel="stylesheet" href="../soundBar/userSoundStyle.css">
-	<!--<link rel="stylesheet" href="../soundBar/css/sBarStyle.css">-->
+	<!--<link rel="stylesheet" href="../soundBar/css/bar-ui.css">
+	<link rel="stylesheet" href="../soundBar/userSoundStyle.css">-->
+	<link rel="stylesheet" href="../soundBar/css/sBarStyle.css">
 </head>
 <body>
 	<table class="table">
