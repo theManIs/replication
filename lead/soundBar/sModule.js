@@ -2,8 +2,9 @@
 supportFunction = {
 	lightRow: function(i, sound) {
 		var recordname = $(sound[i]).attr('recordname');			
-		$('tr.success').removeClass('success');				
-		$('a[recordname="' + recordname + '"').parent().parent().addClass('success');
+		$('tr.success').removeClass('success');
+		recognizeExpr = ('a[recordname="' + recordname + '"]');
+		$(recognizeExpr).parent().parent().addClass('success');
 	},
 	clickPlaylist: function(i, sound) {		
 		$($($('.sm2-playlist-bd')[1]).find('a')[i]).click(function() {
@@ -15,6 +16,7 @@ supportFunction = {
 			event.preventDefault();
 			supportFunction.lightRow(i, sound);
 			$('.sm2-bar-ui').css('display', 'inline-block');
+			console.dir(sm2BarPlayers[0]);
 			sm2BarPlayers[0].playlistController.playItemByOffset(i + 1);
 		});
 	},
@@ -61,8 +63,8 @@ supportFunction = {
 	},
 };
 
-/*
+
 $(document).ready(function() {	
 	supportFunction.controller();
 });
-*/
+
