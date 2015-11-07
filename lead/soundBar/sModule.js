@@ -3,7 +3,7 @@ supportFunction = {
 	lightRow: function(i, sound) {
 		var recordname = $(sound[i]).attr('recordname');			
 		$('tr.success').removeClass('success');				
-		$('*[recordname="' + recordname + '"').parent().parent().addClass('success');
+		$('a[recordname="' + recordname + '"').parent().parent().addClass('success');
 	},
 	clickPlaylist: function(i, sound) {		
 		$($($('.sm2-playlist-bd')[1]).find('a')[i]).click(function() {
