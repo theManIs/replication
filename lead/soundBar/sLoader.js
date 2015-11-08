@@ -42,4 +42,5 @@ var loader = {
 		this.getDir().htmlFile();
 	},
 };
-loader.init();
+if (document.createElement("audio") instanceof HTMLAudioElement)
+	loader.init();
