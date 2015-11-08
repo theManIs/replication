@@ -1,0 +1,5 @@
+1	user	password
+2	boy	boy
+3	gay	gay
+4	john	connor
+5	chen	chack

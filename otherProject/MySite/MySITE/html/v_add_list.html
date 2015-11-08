@@ -1,0 +1,10 @@
+<form method="POST">
+	<label class="InputList">Название <input type="text" name="theName" 
+	value="<?=$this->theName?>"></label>
+	<?=$this->lItem?>
+	<input type="submit" name="add" value="Добавить ещё строку">
+	<input type="submit" name="revoke" value="Удалить строку строку"><br><br>
+	<input type="hidden" name="count" value="<?=$this->count?>">
+	<input type="submit" name="save" class="win8button FormButton" value="<?=$this->v_button?>">
+	<input type="hidden" name="ancestor" value="<?=$this->ancestor?>">
+</form>

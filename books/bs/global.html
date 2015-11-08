@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BootStrap</title>
+	<link href="../css/controller.css" rel="stylesheet" type="text/css">	
+	<script src="../css/dist/js/jq-214.js"></script>
+	<script src="../css/dist/js/bootstrap.min.js"></script>
+	<script src="../css/dist/js/modernizer.js"></script>
+</head>
+<body>
+<section class="section-bar">
+<h3 class="head-header">Основы</h3>
+ 
+
+<h3>Требуется HTML5 doctype</h3>
+<p>Bootstrap использует HTML-элементы и CSS-свойства, которые требуют HTML5 doctype. Включите его во все свои проекты.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="dec"><span class="dec">&lt;!DOCTYPE html&gt;</span></span></li><li class="L1"><span class="tag"><span class="tag">&lt;html</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">lang</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"en"</span></span><span class="tag"><span class="tag">&gt;</span></span></li><li class="L2"><span class="pln"><span class="pln">  ...</span></span></li><li class="L3"><span class="tag"><span class="tag">&lt;/html&gt;</span></span></li></ol></li></ol></pre>
+<h3>Оформление и ссылки</h3>
+<p>Основные компоненты Bootstrap включают в себя элементы отображения, оформления и стили ссылок. В частности, мы:</p>
+<ul>
+<li>Удалили отступ <code>margin</code> элемента body</li>
+<li>Установили белый цвет фона <code>background-color: white;</code> для <code>body</code></li>
+<li>Используем атрибуты <code>@baseFontFamily</code>, <code>@baseFontSize</code> и <code>@baseLineHeight</code> как основные</li>
+<li>Настроили основной цвет ссылки с помощью <code>@linkColor</code> и применяем подчеркивание только для селектора <code>:hover</code></li>
+</ul>
+<p>Эти стили вы можете найти в <strong>scaffolding.less</strong>.</p>
+<h3>Сброс настроек посредством Normalize</h3>
+<p>В Bootstrap 2 мы применили старый сброс браузерных дефолтов с помощью <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, проект от <a href="http://twitter.com/necolas" target="_blank">Николаса Галлагера</a> который также включает в себя <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. Так как мы часто используем Normalize в нашем <strong>reset.less</strong>, мы удалили некоторые элементы специально для Bootstrap.</p>
+
+
+
+</section>
+</body>
+</html>
