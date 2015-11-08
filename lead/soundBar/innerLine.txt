@@ -1,6 +1,0 @@
-#Адреса указаны с учётом того, что папка soundBar находится в одной папке со страницей, в которую интегрирон плеер
-<script language="javascript" src="soundBar/sm2.min.js"></script>
-<script language="javascript" src="soundBar/script/bar-ui.js"></script>
-<script language="javascript" src="soundBar/sModule.js"></script>	
-<link rel="stylesheet" href="soundBar/css/bar-ui.css">
-<link rel="stylesheet" href="soundBar/userSoundStyle.css">
