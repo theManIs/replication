@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../mysite/css/single.css">
+	<link rel="stylesheet" type="text/css" href="../mysite/css/error.css">
+	<link rel="shortcut icon" type="image/png" href="../mysite/favicon.png">
+	<title><?=$this->main_title?></title>
+</head>
+<body><?=self::$privilege?>
+
+<div class="all">
+		<section class="preview">
+			<div class="TopPanel inline-block">
+				<h2 class="main_title header"><?=$this->main_title?></h2><!--
+				--><div class="Time"><!--
+					--><div class="inline-block W50">
+						<span>Технологии:</span><br>
+						<span>PHP <?=$this->php?></span><br>
+						<span>MySQL <?=$this->mySQL?></span><br>
+						<span><?=$this->apache?></span>
+					</div><!--
+					--><div class="inline-block W50">
+						<span class="Dates"><?=$this->dates?></span><br>
+						<span class="Times"><?=$this->times?></span><br>
+						<span class="Day"><?=$this->day?></span>
+					</div><!--
+				--></div><!--
+				--><div class="User">
+					<h3>Логин: <?=$this->userLogin?></h3>
+					<h3>Телефон: <?=$this->userMobile?></h3>
+					<h3>Адрес: <?=$this->userEmail?></h3>
+					<h3>Доступ: <?=$this->userPrivileges?></h3>
+				</div><div class="Exit">
+					<form method="POST">
+						<input type="submit"  class="win8button Exit" name="quit" 
+						value="Выход">
+					</form>
+				</div>
+			</div>
+			<div  class="box-search">
+				<div class="search">
+					<h2 class="main_title"><?=$this->nav_bar?></h2>
+					<?=$this->navPanel?>
+				</div>
+				
+			</div>
+				<div class="search-result">
+						<h2 class="main_title"><?=$this->menu_list?></h2>
+						<div class="fieldResult"><?=$this->result_page?></div>
+				</div>
+				<footer>
+					<hr>
+					<div>Myblog v3.5<br>
+					2015</div>
+					<hr>
+				</footer>
+		</section>
+</div>
+
+</body>
+</html>

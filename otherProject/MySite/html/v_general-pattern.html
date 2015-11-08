@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../mysite/css/single.css">
+	<link rel="stylesheet" type="text/css" href="../mysite/css/cascade.css">
+	<link rel="shortcut icon" type="image/png" href="../mysite/favicon.png">
+	<title><?=$main_title?></title>
+</head>
+<body>
+
+<div class="all">
+		<section class="preview">
+			<div class="TopPanel inline-block">
+				<h2 class="main_title header"><?=$main_title?></h2><!--
+				--><div class="Time"><!--
+					--><div class="inline-block W50">
+						<span>Технологии:</span><br>
+						<span>PHP <?=$php?></span><br>
+						<span>MySQL <?=$mySQL?></span><br>
+						<span><?=$apache?></span>
+					</div><!--
+					--><div class="inline-block W50">
+						<span class="Dates"><?=$dates?></span><br>
+						<span class="Times"><?=$times?></span><br>
+						<span class="Day"><?=$day?></span>
+					</div><!--
+				--></div><!--
+				--><div class="User">
+					<h3>Логин: <?=$userLogin?></h3>
+					<h3>Телефон: <?=$userMobile?></h3>
+					<h3>Адрес: <?=$userEmail?></h3>
+					<h3>Привилегии: <?=$userPrivileges?></h3>
+				</div><div class="Exit">
+					<form method="POST">
+						<input type="submit"  class="win8button Exit" name="exit" 
+						value="Выход">
+					</form>
+				</div>
+			</div>
+			<div  class="box-search">
+				<div class="search navigate">
+					<small>
+						<h2 class="main_title"><?=$nav_bar?></h2>
+							<h2><a href="../Вход" class="win8button"
+							>Главная страница</a></h2>
+							<h2><a href="../Статьи" class="win8button"
+							>Просмотреть статьи</a></h2>
+							<!--<h2><a href="../Поиск" class="win8button"
+							>Поиск по блогу</a></h2>-->
+							<h2><a href="../Удалить" class="win8button"
+							>Удалить статью</a></h2>
+							<h2><a href="../Добавить" class="win8button"
+							>Добавить статью</a></h2>
+							<h2><a href="../Изменить" class="win8button"
+							>Изменить статью</a></h2>
+							<h2><a href="../Комментарии" class="win8button"
+							>Комментировать статьи</a></h2>
+					</small>
+				</div>
+				<?=$search_string?>
+			</div>
+				<div class="search-result">
+						<h2 class="main_title"><?=$menu_list?></h2>
+						<div class="fieldResult"><?=$result_page?></div>
+				</div>
+				<footer>
+					<hr>
+					<div>Myblog v3.0<br>
+					2015</div>
+					<hr>
+				</footer>
+		</section>
+</div>
+
+</body>
+</html>

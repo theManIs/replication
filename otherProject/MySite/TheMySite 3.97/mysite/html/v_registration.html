@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" 
+	href="http:../mysite/css/autorisationStyle.css">
+	<link rel="stylesheet" type="text/css" href="../mysite/css/warning.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="../mysite/favicon.png">
+</head>
+<body>
+<div id="cel">
+<div class="container">
+<form method="POST" id="myform">
+	<div class="darkblue">
+		<p id="legend">Регистрация</p>
+		<small class="SmallNote"><?=$this->isSets?></small>
+		<div class="Labels">
+			<label for="login">Логин</label>
+			<label for="password">Пароль</label>
+			<label for="repeat">Повтор пароля</label>
+			<label for="mobile">Мобильный телефон +7</label>
+			<label for="email">Электронная почта</label>
+		</div>
+		<div class="Inputs">
+			<input type="text" id="login" name="login" maxlength="16"
+			placeholder="От 1 до 16 символов" value="<?=$this->login?>" class="<?=$this->first?>">
+			<input type="password" id="password" name="password" 
+			maxlength="16" placeholder="От 1 до 16 символов" value="<?=$this->password?>" 
+			class="<?=$this->second?>">
+			<input type="password" id="repeat" name="repeat" 
+			maxlength="16" placeholder="От 1 до 16 символов" value="<?=$this->repeat?>"
+			class="<?=$this->third?>">
+			<input type="text" name="mobile" id="mobile" maxlength="10"
+			placeholder="Ровно 10 цифр" value="<?=$this->mobile?>" class="<?=$this->fourth?>">
+			<input type="text" name="email" id="email" maxlength="20"
+			placeholder="от 1 до 20 символов" value="<?=$this->email?>" class="<?=$this->fifth?>">
+		</div>
+		<input type="submit" name="registration" value="Да"><br>
+		<a href="../Авторизация" id="RegNote">...или авторизироваться</a>
+	</div>
+</form>
+</div>
+</div>
+</body>
+</html>

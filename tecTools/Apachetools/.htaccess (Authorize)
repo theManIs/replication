@@ -1,0 +1,9 @@
+#AuthType Basic
+#AuthName "Message for access"
+#AuthUserFile (.*)/.htpasswd
+#Require valid-user
+
+
+
+# Такую строчку надо выполнить для создания файла ключей
+# (.*)/apache/bin htpasswd.exe -c .htpasswd username

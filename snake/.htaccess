@@ -1,0 +1,8 @@
+#RewriteEngine on
+
+#RewriteCond %{REQUEST_URI} style.css$
+#RewriteRule ^(.*)$ [F]
+#RewriteCond %{REQUEST_URI} backEnd.php$
+#RewriteRule .* [F]
+#RewriteCond %{REQUEST_URI} model.php$
+#RewriteRule ^(.*)$

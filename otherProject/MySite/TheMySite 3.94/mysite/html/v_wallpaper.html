@@ -1,0 +1,28 @@
+<ul class="listItem">
+	<li><p class="main_name"><img 
+	src="../mysite/png/notes.png"
+	><?=$title?></p>
+	<a href="../Статья/<?=$title?>"
+	class="win8button"><img 
+	src="../mysite/png/paperclip.png"
+	>читать статью и комментарии...</a>
+	<li><ul>
+		<li><?=$article?>
+	</ul>
+	<!--delete<form method="POST">
+		<input type="hidden" name="iden" value="<?=$aId?>">
+		<input type="submit" class="win8button" name="delete" value="Удалить">
+	</form>delete-->	
+	<!--update<form method="POST" action="Изменение">
+		<input type="hidden" name="get_iden" value="<?=$aId?>">
+		<input type="submit" class="win8button" 
+		name="cut" value="Редактировать">
+	</form>update-->
+	<!--comments<form method="POST">
+		<textarea class="CommentsArea" 
+		name="textInfo" placeholder="И чего?"></textarea>
+		<input type="hidden" name="iden" value="<?=$aId?>"><br>
+		<input type="submit" class="win8button" name="comments" value="Оставить">
+		</form>comments-->
+	
+</ul>

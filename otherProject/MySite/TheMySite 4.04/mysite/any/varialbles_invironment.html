@@ -1,0 +1,271 @@
+<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><div id="centralNotice"></div><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="ru">Переменная среды Windows</h1>
+									<div id="bodyContent" class="mw-body-content"><span class="mw-editsection" style="float: right;"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;veaction=edit&amp;vesection=0" title="Править введение" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;action=edit&amp;section=0" title="Править введение">править вики-текст</a><span class="mw-editsection-bracket">]</span></span>
+									<div id="siteSub">Материал из Википедии — свободной энциклопедии</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Перейти к:					<a href="#mw-head">навигация</a>, 					<a href="#p-search">поиск</a>
+				</div>
+				<div id="mw-content-text" lang="ru" dir="ltr" class="mw-content-ltr"><p><b>Переменная окружения</b> (<a href="/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B" title="Переменная среды">переменная среды́</a>, <a href="/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Английский язык">англ.</a>&nbsp;<i><span lang="en" xml:lang="en">environment variable</span></i>) в <a href="/wiki/Windows" title="Windows">Windows</a> используются для хранения текстовых строк пользователя и информации о настройках <a href="/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" title="Операционная система">операционных систем</a>.</p>
+<h2><span class="mw-headline" id=".D0.A1.D0.BF.D0.B8.D1.81.D0.BE.D0.BA_.D0.BF.D0.B5.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.BD.D1.8B.D1.85">Список переменных</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;veaction=edit&amp;vesection=1" title="Редактировать раздел «Список переменных»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;action=edit&amp;section=1" title="Редактировать раздел «Список переменных»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>В современных ОС компании <a href="/wiki/Microsoft" title="Microsoft">Microsoft</a> на платформе <a href="/wiki/NT" title="NT" class="mw-redirect">NT</a> для получения информации о системе используются следующие переменные (<b>Полужирным выделен текст, относящийся только к Windows Vista/7</b>):</p>
+<table class="standard">
+<tbody><tr>
+<th>Название</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>ALLUSERSPROFILE</td>
+<td>локальная</td>
+<td>Возвращает размещение профиля «All Users». <b>В Windows 7 возвращает путь к папке C:\ProgramData\</b>.</td>
+</tr>
+<tr>
+<td>APPDATA</td>
+<td>системная</td>
+<td>Возвращает используемое по умолчанию размещение данных приложений. В Windows XP это C:\Documents and Settings\%UserName%\Application Data. <b>В Windows 7 - C:\Users\%UserName%\AppData\Roaming</b>.</td>
+</tr>
+<tr>
+<td>CD</td>
+<td>локальная</td>
+<td>Указывает путь к текущему каталогу. Идентична команде CD без аргументов.</td>
+</tr>
+<tr>
+<td>CLIENTNAME</td>
+<td>локальная динамическая</td>
+<td>Переменная определена только в среде удаленного подключения к рабочему столу. Хранит имя компьютера (%COMPUTERNAME%) клиента удаленного доступа.</td>
+</tr>
+<tr>
+<td>CMDCMDLINE</td>
+<td>локальная</td>
+<td>Точная команда, использованная для запуска текущего cmd.exe.</td>
+</tr>
+<tr>
+<td>CMDEXTVERSION</td>
+<td>системная</td>
+<td>Версия текущего Command Processor Extensions.</td>
+</tr>
+<tr>
+<td>COMMONPROGRAMFILES</td>
+<td>системная</td>
+<td>Расположение каталога "Common Files" (обычно&nbsp;%ProgramFiles%\Common Files).</td>
+</tr>
+<tr>
+<td>COMMONPROGRAMFILES(x86)</td>
+<td>системная</td>
+<td><b>Расположение каталога "Common Files" в Program Files (x86) для 64-разрядной ОС (обычно&nbsp;%ProgramFiles(x86)%\Common Files)</b>.</td>
+</tr>
+<tr>
+<td>COMPUTERNAME</td>
+<td>системная</td>
+<td>Имя компьютера</td>
+</tr>
+<tr>
+<td>COMSPEC</td>
+<td>системная</td>
+<td>Путь к исполняемому файлу командного процессора (shell).</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>системная</td>
+<td>Возвращает текущую дату. Использует тот же формат, что и команда date /t. Создаётся командой Cmd.exe.</td>
+</tr>
+<tr>
+<td>ERRORLEVEL</td>
+<td>системная</td>
+<td>Возвращает код ошибки последней использовавшейся команды. Значение, не равное нулю, обычно указывает на наличие ошибки.</td>
+</tr>
+<tr>
+<td>HOMEDRIVE</td>
+<td>системная</td>
+<td>Возвращает имя диска локальной рабочей станции, связанного с основным каталогом пользователя. Задаётся на основании расположения основного каталога. Основной каталог пользователя указывается в оснастке «Локальные пользователи и группы».</td>
+</tr>
+<tr>
+<td>HOMEPATH</td>
+<td>системная</td>
+<td>Возвращает полный путь к основному каталогу пользователя. Задаётся на основании расположения основного каталога. Основной каталог пользователя указывается в оснастке «Локальные пользователи и группы».</td>
+</tr>
+<tr>
+<td>HOMESHARE</td>
+<td>системная</td>
+<td>Возвращает сетевой путь к <a href="/wiki/%D0%9E%D0%B1%D1%89%D0%B8%D0%B9_%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81" title="Общий ресурс">общему</a> основному каталогу пользователя. Задаётся на основании расположения основного каталога. Основной каталог пользователя указывается в оснастке «Локальные пользователи и группы».</td>
+</tr>
+<tr>
+<td>LOCALAPPDATA</td>
+<td>системная</td>
+<td><b>Возвращает используемое по умолчанию локальное размещение данных приложений (C:\Users\%UserName%\AppData\Local)</b>.</td>
+</tr>
+<tr>
+<td>LOGONSERVER</td>
+<td>локальная</td>
+<td>Имя контроллера домена, использовавшегося для авторизации текущего пользователя.</td>
+</tr>
+<tr>
+<td>NUMBER_OF_PROCESSORS</td>
+<td>системная</td>
+<td>Количество процессоров в системе (фактически, количество ядер).</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>системная</td>
+<td>Название операционной системы. Windows XP и Windows 2000 отображаются как Windows_NT.</td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>системная</td>
+<td>Указывает путь поиска исполняемых файлов.</td>
+</tr>
+<tr>
+<td>PATHEXT</td>
+<td>системная</td>
+<td>Возвращает список расширений файлов, которые рассматриваются операционной системой как исполняемые.</td>
+</tr>
+<tr>
+<td>PROCESSOR_ARCHITECTURE</td>
+<td>системная</td>
+<td>Архитектура процессора. Возможные варианты: <a href="/wiki/X86" title="X86">x86</a>, <a href="/wiki/IA-64" title="IA-64">IA64</a>, <a href="/wiki/X86-64" title="X86-64">AMD64</a>.</td>
+</tr>
+<tr>
+<td>PROCESSOR_IDENTIFIER</td>
+<td>системная</td>
+<td>Описание процессора (в Интернете часто встречается ошибочное написание PROCESSOR_IDENTFIER - пропущена буква).</td>
+</tr>
+<tr>
+<td>PROCESSOR_LEVEL</td>
+<td>системная</td>
+<td>Номер модели процессора.</td>
+</tr>
+<tr>
+<td>PROCESSOR_REVISION</td>
+<td>системная</td>
+<td>Ревизия процессора.</td>
+</tr>
+<tr>
+<td>PROGRAMDATA</td>
+<td>системная</td>
+<td><b>Возвращает путь к каталогу C:\ProgramData\ (аналогично ALLUSERSPROFILE)</b>.</td>
+</tr>
+<tr>
+<td>PROGRAMFILES</td>
+<td>системная</td>
+<td>Путь к каталогу <a href="/w/index.php?title=Program_Files&amp;action=edit&amp;redlink=1" class="new" title="Program Files (страница отсутствует)">Program Files</a>.</td>
+</tr>
+<tr>
+<td>PROGRAMFILES(x86)</td>
+<td>системная</td>
+<td>Путь к каталогу <a href="/w/index.php?title=Program_Files_(x86)&amp;action=edit&amp;redlink=1" class="new" title="Program Files (x86) (страница отсутствует)">Program Files (x86)</a> в 64-разрядных системах для приложений архитектуры x86.</td>
+</tr>
+<tr>
+<td>PROMPT</td>
+<td>локальная</td>
+<td>Возвращает параметры командной строки для текущего интерпретатора. Создаётся командой Cmd.exe.</td>
+</tr>
+<tr>
+<td>PUBLIC</td>
+<td>системная</td>
+<td><b>В Windows 7 возвращает путь к каталогу C:\Users\Public</b>.</td>
+</tr>
+<tr>
+<td>RANDOM</td>
+<td>системная</td>
+<td>Случайное десятичное число от 0 до 32767. Генерируется Cmd.exe.</td>
+</tr>
+<tr>
+<td>SESSIONNAME</td>
+<td>локальная</td>
+<td>Хранит имя активного пользовательского сеанса. При локальном входе имеет значение "Console", при удаленном доступе имеет вид RDP-Tcp#&lt;номер сеанса&gt;</td>
+</tr>
+<tr>
+<td>SYSTEMDRIVE</td>
+<td>системная</td>
+<td>Диск, на котором расположен корневой каталог Windows.</td>
+</tr>
+<tr>
+<td>SYSTEMROOT</td>
+<td>системная</td>
+<td>Путь к корневому каталогу Windows.</td>
+</tr>
+<tr>
+<td>TEMP и TMP</td>
+<td>системная и локальная</td>
+<td>Возвращает временные каталоги, по умолчанию используемые приложениями, которые доступны пользователям, выполнившим вход в систему. Некоторые приложения требуют переменную TEMP, другие — переменную TMP. Потенциально TEMP и TMP могут указывать на разные каталоги, но обычно совпадают.</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>системная</td>
+<td>Возвращает текущее время. Использует тот же формат, что и команда time /t. Создаётся командой Cmd.exe. Дополнительные сведения о команде time см. в разделе Time.</td>
+</tr>
+<tr>
+<td>USERDOMAIN</td>
+<td>локальная</td>
+<td>Имя домена, которому принадлежит текущий пользователь.</td>
+</tr>
+<tr>
+<td>USERNAME</td>
+<td>локальная</td>
+<td>Имя текущего пользователя.</td>
+</tr>
+<tr>
+<td>USERPROFILE</td>
+<td>локальная</td>
+<td>Путь к профилю текущего пользователя.</td>
+</tr>
+<tr>
+<td>WINDIR</td>
+<td>системная</td>
+<td>Каталог, в котором установлена Windows.</td>
+</tr>
+</tbody></table>
+<h2><span class="mw-headline" id=".D0.A0.D0.B0.D0.B1.D0.BE.D1.82.D0.B0_.D1.81_.D0.BF.D0.B5.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.BD.D1.8B.D0.BC.D0.B8">Работа с переменными</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;veaction=edit&amp;vesection=2" title="Редактировать раздел «Работа с переменными»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;action=edit&amp;section=2" title="Редактировать раздел «Работа с переменными»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Чтобы получить доступ к значению переменной, необходимо поставить знак&nbsp;% перед её названием и после него, например:</p>
+<pre>echo %PROCESSOR_ARCHITECTURE%
+</pre>
+<p>Чтобы установить значение переменной:</p>
+<pre>SET TEMP=C:\TEMP
+</pre>
+<p>Кроме того, с переменными среды можно работать, нажав кнопку «Переменные среды» на вкладке «Дополнительно» в диалоговом окне «Свойства системы» (контекстное меню значка «Мой компьютер» → пункт «Свойства»).</p>
+<p>Также необходимо помнить, что, в отличие от UNIX-систем, в DOS и в стандартной командной строке Windows переменные среды не наследуются запускаемыми процессами, а используются совместно. Это позволяет, например, возвращать через них результаты работы программ, но, с другой стороны, создаёт возможность порчи или переполнения. Особенно актуально переполнение для переменной PATH, поскольку она часто дополняется при работе различных скриптов. При возникновении такого переполнения достаточно просто перезапустить интерпретатор командной строки. Интерпретаторы, портированные из UNIX-систем (например, Z-shell), такой проблеме не подвержены.</p>
+<p>Получить значение переменной в программном коде можно с помощью метода ExpandEnvironmentStrings COM-объекта WScript.Shell:</p>
+<pre>WScriptShell = ObjCreate("WScript.Shell")
+UserName = WScriptShell.ExpandEnvironmentStrings("%USERNAME%")
+</pre>
+<p>Следует учитывать, что набор значений переменных среды получается процессом во время его запуска, все запускаемые им подчиненные процессы получают значения переменных из этого набора, если второй процесс (независимый от первого) изменяет значение переменной среды или создает новую переменную, эти изменения не будут доступны первому процессу.</p>
+<p>Значения переменных среды LOGONSERVER, CLIENTNAME, SESSIONNAME, APPDATA, HOMEDRIVE, HOMEPATH устанавливаются при открытии сеанса на основании значений в ветке реестра [HKEY_CURRENT_USER\Volatile Environment].</p>
+<h2><span class="mw-headline" id=".D0.A2.D1.80.D1.83.D0.B4.D0.BD.D0.BE.D1.81.D1.82.D0.B8_.D0.BF.D0.B5.D1.80.D0.B5.D0.B2.D0.BE.D0.B4.D0.B0">Трудности перевода</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;veaction=edit&amp;vesection=3" title="Редактировать раздел «Трудности перевода»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B_Windows&amp;action=edit&amp;section=3" title="Редактировать раздел «Трудности перевода»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Очень часто встречается неправильное понимание слова «среды» в словосочетании «Переменные среды». Непонимание возникает из-за прочтения слова «среды» с неправильным ударением на первый слог, что приводит к распознаванию этого слова как формы именительного падежа множественного числа слова «среда» (окружение). Правильным является понимание слова «среды» как формы родительного падежа единственного числа слова «среда» и произношение с ударением на второй слог.</p>
+<p>Таким образом, неправильно говорить, например, «с переменными сре́дами» ("с переменными окружениями"), а правильно&nbsp;— «с переменными среды́» ("с переменными окружения").</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1217
+CPU time usage: 0.014 seconds
+Real time usage: 0.020 seconds
+Preprocessor visited node count: 55/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 228/2097152 bytes
+Template argument size: 64/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/500
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.611      1 - Шаблон:Lang-en
+100.00%    5.611      1 - -total
+ 64.29%    3.607      1 - Шаблон:Langi-en2
+ 31.19%    1.750      1 - Шаблон:Lang
+-->
+
+<!-- Saved in parser cache with key ruwiki:pcache:idhash:544532-0!*!0!!*!*!* and timestamp 20150622085217 and revision id 62689710
+ -->
+<noscript>&lt;img src="//ru.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /&gt;</noscript></div>					<div class="printfooter">
+						Источник — «<a dir="ltr" href="https://ru.wikipedia.org/w/index.php?title=Переменная_среды_Windows&amp;oldid=62689710">https://ru.wikipedia.org/w/index.php?title=Переменная_среды_Windows&amp;oldid=62689710</a>»					</div>
+				<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8" title="Служебная:Категории">Категория</a>: <ul><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:Microsoft_Windows" title="Категория:Microsoft Windows">Microsoft Windows</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>

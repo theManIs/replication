@@ -1,0 +1,99 @@
+	/*Групповые свойства*/
+
+body, 
+html,
+.Exit input,
+.Exit form
+{
+	width: 100%; 
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
+}
+
+.listItem,
+.text_align,
+.search-result
+{
+	text-align: left;
+}
+
+.header,
+.Exit,
+.Time,
+.User
+{
+	width: 25%;
+}
+
+.Time,
+.Exit,
+.User
+{
+	height: 87px;
+}
+
+.search,
+footer,
+.fieldResult,
+.enter,
+.Time,
+.header
+{
+	text-align: center;
+}
+
+.search-result,
+.preview,
+.User,
+.Time,
+.Exit,
+.search,
+.inline-block
+{
+	vertical-align: top;
+}
+
+.box-search,
+.header,
+.Exit,
+.User,
+.Time ,
+.enter,
+.search-result,
+.preview,
+.inline-block,
+.win8button
+{
+	display: inline-block;
+}
+
+.win8button,
+.win8button:hover,
+.win8button:active
+{
+	background: rgba(72, 61, 139, .6);
+	border: 0px solid black;
+	border-left: 5px solid navy;
+}
+
+.search,
+.search-result,
+.text_field
+{
+	border: 1px solid black;
+}
+
+.main_title,
+.main_name,
+.listItem,
+.listItem:hover,
+footer
+ {
+	background: -webkit-linear-gradient(
+	135deg,
+	rgba(72, 61, 139, .6) 0%, 
+	rgba(255, 255, 255, .6) 50%,
+	rgba(72, 61, 139, .6) 100%
+	);
+}

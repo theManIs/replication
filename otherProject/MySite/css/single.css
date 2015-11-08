@@ -1,0 +1,198 @@
+	/*Одиночные свойства*/
+
+.inline-block:nth-child(1) > span
+{
+	font: 17px Verdana;
+}
+	
+.CommentsArea 
+{
+	width: 80%;
+}
+
+.enter
+ {
+	line-height: 520px;
+	width: 600px;
+	vertical-align: center;
+	font-size: 50px;
+	margin: 0;
+}
+
+.main_title 
+{
+	padding: 20px 0;
+	font: 30px Times New Roman;
+	cursor: default;
+	margin: 0;
+}
+
+.User,
+.sear
+{
+	text-align: right;
+	outline: 1px solid black;
+	outline-offset: -1px;
+}
+
+
+.W50
+{
+	width: 50%; 
+	height: 100%;
+	outline: 1px solid black;
+	outline-offset: -1px;
+}
+
+.W50:hover,
+.User:hover,
+.sear:hover
+{ 	transform: translate(15px, 15px);
+	cursor: crosshair;
+	color: white;
+	background: black;
+}
+
+.header
+{
+	height: 37px;
+	padding: 25px 0;
+}
+.User h3
+{
+	margin: 0 5% 0 0;
+}
+
+.Exit input:hover
+{
+	width: 125%;
+	height: 125%;
+	font-size: 35px;
+	cursor: pointer;
+}
+
+.main_name 
+{
+	font: italic 30px Courier;
+}
+
+.win8button {
+
+	width: auto;
+	height: auto;
+	color: black;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 3px;
+}
+
+.win8button:hover 
+{
+	font-size: 25px;
+	transition: 
+	width .3s linear 0s, 
+	height .3s linear 0s, 
+	font-size .3s linear 0s,
+	transform .3s linear 0s,
+	box-shadow .3s linear 0s;
+	box-shadow: inset 0px -5px 15px black;
+	cursor: pointer;
+	transform: rotate(-5deg) scale(1.2,1.2);
+}
+
+#create
+{
+	width: 200px;
+	height: 50px;
+}
+
+.win8button:active 
+{
+	color: white;
+	transform: rotate(-5deg) scale(1.2,1.2);
+	outline: 0px solid black;
+}
+
+.navigate 
+{
+	height: auto;
+}
+
+label 
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.text_field
+ {
+	width: 600px;
+	padding: 0;
+	margin: 1px 0;
+}
+
+
+.search 
+{
+	padding: 0px;
+	margin: 25px;
+	width: 290px;
+}
+
+.search-result 
+{
+	padding: 0px;
+	margin: 25px;
+	min-height: 600px;
+	max-width: 650px;
+}
+
+.preview 
+{
+	max-width: 1150px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+footer 
+{
+	width: 100%;
+}
+
+.all 
+{
+	padding: 0;
+	margin: 0 auto;
+	width: 1050px;
+}
+
+.listItem:hover 
+{
+	cursor: default;
+	transform: scale(1.2,1.2);
+}
+
+.fieldResult 
+{
+	padding: 0;
+	margin: 10px;
+}
+
+.listItem {
+	list-style-type: none;
+	padding-left: 0px;
+	list-style-position: inside;
+}
+.listItem > li:first-child {
+	list-style-image: url('note.png');
+}
+
+.Times
+{
+	font: 40px Verdana;
+}
+
+.TopPanel
+{
+	width: 100%;
+}

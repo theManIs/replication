@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../mysite/css/autorisationStyle.css">
+	<link rel="stylesheet" type="text/css" href="../mysite/css/warning.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="Warning">
+<div id="cel">
+	<div class="container">
+		<div id="myform">
+			<div class="darkblue">
+			<p id="legend">Отчёт об ошибке!</p>
+			<h2 class="Caution"><?=$this->main_title?></h2>
+			<h3><?=$this->menu_list?><br>
+			<span class="GreyText"><?=$this->result_page?></span></h3>
+			<h4><?=$this->include_page?></h4>
+			<h5><?=$this->switch_pattern?>
+			<span class="GreyText"><?=$this->search?></span></h5>
+			<a href="../gate" id="RegNote">Вернуться на главную</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

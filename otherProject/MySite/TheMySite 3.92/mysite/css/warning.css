@@ -1,0 +1,19 @@
+.Warning
+{
+	background: rgba(255,0,0,.5);
+}
+
+.Caution
+{
+	background: rgba(255,255,0,.5);
+}
+
+.Success
+{
+	background: rgba(0,255,0, .5);
+}
+
+.GreyText {color: gray}
+
+.BlackText {color: black}
+

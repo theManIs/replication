@@ -1,0 +1,9 @@
+<form method="POST">
+	<textarea id="articleArea" rows=30 class="text_field InputFields" name="article"
+	placeholder="Содержание статьи"><?=$this->article?></textarea>
+		<br>
+	<input type="submit" name="save" class="win8button FormButton"
+	 value="<?=$this->v_button?>">
+	<input type="hidden" name="ancestor" value="<?=$this->ancestor?>">
+	<input type="hidden" name="iden" value="<?=$this->aId?>"><br>
+</form>
