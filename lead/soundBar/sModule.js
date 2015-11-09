@@ -16,7 +16,6 @@ supportFunction = {
 			event.preventDefault();
 			supportFunction.lightRow(i, sound);
 			$('.sm2-bar-ui').css('display', 'inline-block');
-			console.dir(sm2BarPlayers[0]);
 			sm2BarPlayers[0].playlistController.playItemByOffset(i + 1);
 		});
 	},
