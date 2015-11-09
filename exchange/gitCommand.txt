@@ -1,0 +1,14 @@
+git add
+git status
+git commit -a -m
+git giff
+git reset
+git rm
+git mv
+git clean
+git chekout aim
+git branch aim
+git pull <repository> <branch>
+git clone <source> <target>
+scp -r <local> <remote>
+git clone --bare <source> <target>
