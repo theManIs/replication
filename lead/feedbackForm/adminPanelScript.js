@@ -161,7 +161,6 @@ var fFunctions = {
 				paramsLine.push(set);			
 			}
 		}
-		console.log(paramsLine);
 		$.post('backEnd.php', 'data=' + paramsLine, function(data){alert(data);}, 'html');
 	},
 };
