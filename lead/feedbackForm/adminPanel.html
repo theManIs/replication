@@ -1,0 +1,98 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--<link rel="stylesheet" href="extensions\bootstrap\css\bootstrap.min.css">-->
+	<link rel="stylesheet" href="../extensions/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="callkeeperStyle.css">
+	<link rel="stylesheet" href="adminPanelStyle.css">
+	<!--<link rel="stylesheet" href="formUserStyle.css">-->
+	<link rel="stylesheet" media="screen" type="text/css" 
+		href="../extensions/colorpicker/css/colorpicker.css">
+	<script language="javascript" src="../extensions/jqui/jquery.js"></script>
+	<script language="javascript" src="../extensions/jqui/jquery-ui.min.js"></script>
+	<script language="javascript" src="../extensions/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../extensions/colorpicker/js/colorpicker.js"></script>
+	<script language="javascript" src="adminPanelScript.js"></script>
+	<script language="javascript" src="myJsUnit.js"></script>
+
+</head>
+<body>
+<div>
+	<div>
+	<div class="color selector box">
+		<div class="picker little box">
+			<input type="text" hidden id="colorPickerId">
+			<div class="color selector inner"></div>
+			<div class="color selector border"></div>
+		</div>
+		<span>Выберите цвет</span>
+	</div>
+	<div class="callkeeperMain mainWorkFrame displayInlineBlock">
+		<header>
+			<input type="text" id="callkeeperTitleFormClone" class="headerHtmlTitle smartEditForm"
+				style="display: none;">
+			<h3 name="callkeeperMain" id="callkeeperTitleForm"  class="headerHtmlTitle"
+				>Отправить сообщение</h3>
+			<div>
+				<textarea id="callkeeperSecondMessageClone"  
+					class="textAreaShortPost smartEditForm textAreaStyle"></textarea>
+				<div id="callkeeperSecondMessage" class="textAreaShortPost"
+				>Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время</div>
+			</div>
+		</header>
+		<section>
+			<div class="addListTool" id="addFieldToolId">
+				<a href="#" >+ добавить новое поле</a>
+			</div>
+			<div class="addListTool" id="addListToolId">
+				<a href="#" >+ добавить раскрывающийся список</a>
+			</div>
+			<div class="blockContainerElement">
+				<textarea type="text"  class="callkeeperQuestion smartEditForm textAreaStyle" 
+					id="callkeeperQuestionClone"></textarea>
+				<textarea type="text" id="youQuestion" class="callkeeperQuestion textAreaStyle"
+					placeholder="Введите ваш вопрос"></textarea>
+			</div>
+			<input id="callkeeperYouSendClone" 
+				class="callkeeperTextAlignCenter smartEditForm callkeeperAnyButton">
+			<button id="youSend" class="callkeeperAnyButton">Отправить</button>
+			<input id="callkeeperYouCloseClone" 
+				class="callkeeperTextAlignCenter smartEditForm closeButtonFeatures callkeeperAnyButton">
+			<button id="youClose" class="callkeeperAnyButton">Закрыть</button>
+		</section>
+	</div><br>
+</div>
+<div>
+	<div class="pushButtonContainer displayInlineBlock">
+		<input type="text" id="callYouPushClone" 
+				class="callkeeperTextAlignCenter smartEditForm callkeeperAnyButton pushButtonData">
+		<button id="youPush" class="callkeeperAnyButton pushButtonData">Оставить данные</button>
+	</div>
+	<div class="containerBillboard displayInlineBlock">
+		<div class="callkeeperBillboard">
+			<input type="text" id="titleForCompleteClone" class="callkeeperMessage smartEditForm">
+			<h2 class="callkeeperMessage" id="titleForComplete">Сообщение</h2>
+			<textarea id="callMesBodyClone" class="callkeeperMessageBody smartEditForm"></textarea>
+			<p class="callkeeperMessageBody" id="callMesBody"
+				>Вы успешно отправили свои контактные данные</p>
+		</div>
+	</div>
+	<div class="redactListScroll" id="redactListScroll">
+		<h3 class="titleRedactList">Введите список полей выпадающего меню</h3>
+		<input type="text" class="itemListScroll itemListScrollHeader" 
+			placeholder="Здесь будет название списка">
+		<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+		<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+		<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+		<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+		<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+		<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+		<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+		<button class="callkeeperAnyButton clickAcceptButton" id="clickAcceptId">Подтвердить</button>
+	</div>
+</div>
+<div class="save button type" id="saveButtonId">
+	<button>Сохранить изменения</button>
+<div>
+</body>
+</html>

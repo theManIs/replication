@@ -3,21 +3,16 @@
 	padding: 0px; 
 	margin: 0px;
 }
-
-
 .callkeeperMain 
 {
 	width: 300px;
-	#height: 500px;
 	background: white;
 	position: absolute;
 	top: calc(50% - 250px);
 	left: calc(50% - 150px);
-	#border-radius:10px;
 	border: 0px solid black;
 	box-shadow: 0px 0px 10px rgba(0,0,0, .4);
 }
-
 .headerHtmlTitle
 {
 	width: 300px;
@@ -32,9 +27,7 @@
 	background: #399CE3;
 	border-bottom: 1px solid black;
 	text-align: center;
-	#border-radius:10px 10px 0 0;
 }
-
 .textAreaShortPost
 {
 	font-weight: 400;
@@ -50,45 +43,28 @@
 	height: 40px;
 	margin: 10px 0 0 15px;
 	font: 14px Verdana;
-	#box-shadow: 0px 0px 5px black;
 	border: 0px dotted black;
+	outline: 0;
 	background: rgba(0,0,0, .1);
 	
 }
-
-.callKeeperMain section  input:focus
-{
-	#background: rgba(0, 0, 255, .2);
-	#border: 2px solid rgba(0, 0, 255, .5);
-}
-
-.callKeeperMain section > #youSend
-{
-	#border-radius: 0 0 0 10px;
-}
-
 .callKeeperMain section > #youClose
 {
 	border-left: 1px solid black;
-	#border-radius: 0  0 10px 0;
 }
-
 .callkeeperAnyButton
 {
 	float: left;
 	font: 20px verdana;
-	#position: relative;
 	width:  50%;
 	height: 50px;
 	margin-top: 14px;
 	border: 0px solid black;	
 	background: #399CE3;	
 }
-
 .callkeeperAnyButton, .smartEditForm {
 	outline: 0px solid black;
 }
-
 .pushButtonData
 {
 	position: absolute;
@@ -97,18 +73,15 @@
 	margin-left: calc(100% - 250px);
 	width:  250px;
 }
-
 .callkeeperAnyButton:hover
 {
 	color: white;
 	cursor: pointer;
 }
-
-option
+div.blockContainerElement option
 {
 	background: white;
 }
-
 .callkeeperBillboard
 {
 	background: white;
@@ -122,7 +95,6 @@ option
 	width: 400px;
 	height: 200px;
 }
-
 .callkeeperMessage
 {
 	font-size: 22px;
@@ -132,7 +104,6 @@ option
 	text-align: center;
 	border-bottom: 1px solid black;
 }
-
 .callkeeperMessageBody
 {
 	box-sizing: border-box;
@@ -143,13 +114,11 @@ option
 	padding: 40px 0 40px 0;
 	font: 25px Verdana;
 }
-
 .callkeeperQuestion
 {
 	resize: vertical;
 }
-
-.callkeeperAnyButton, .headerHtmlTitle, .textAreaShortPost
+.callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .textAreaShortPost
 {
 	background-image: -linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
 	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
