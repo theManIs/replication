@@ -4,6 +4,7 @@ var fVariables = {
 	formColorMaster: 'coral',
 	inputFieldId : 'inputFieldId',
 	selectMenuId : 'selectMenuId',
+	formToken : 123456,
 };
 var fFunctions = {
 	addField : function(before, addClass) {			
@@ -101,8 +102,6 @@ var fFunctions = {
 			});
 			save = origin.is('input') ? origin.parent().parent().find('.fa.fa-check.fa-2x').parent() :
 				origin.parent().find('.fa.fa-check.fa-2x').parent();
-			//console.log(origin);
-			//console.log(origin.is('input'));
 			save.click(function(event) {
 				keeperSave(origin, clone);
 			});					
@@ -118,7 +117,6 @@ var fFunctions = {
 		$('.color.selector.inner').css('background', color)
 	},
 	colorpickerInit : function() {
-		//$('#colorPickerId').ColorPicker({
 		$('#colorpickerHolder').ColorPicker({
 			flat : true,
 			onSubmit: function(hsb, hex, rgb, el) {
@@ -128,13 +126,11 @@ var fFunctions = {
 				fFunctions.formPaint('#' + hex);
 			},
 			onBeforeShow: function () {
-				//$(this).ColorPickerSetColor(fVariables.formColorMaster);
 				$(this).ColorPickerSetColor(this.value);
 			},
 			onShow : function() {
 				$('.colorpicker').css({'top':'50px','left':'50px',});
 			},
-		//}).bind('mouseup', function(){
 		}).bind('keyup', function(){	
 			$(this).ColorPickerSetColor(this.value);
 		})
@@ -169,7 +165,9 @@ var fFunctions = {
 				paramsLine.push(set);			
 			}
 		}
-		$.post('backEnd.php', 'data=' + paramsLine, function(data){alert(data);}, 'html');
+		paramsLine = $.toJSON(paramsLine);
+		var strU = 'form_json=' + paramsLine + '&form_token=' + fVariables.formToken;
+		$.post('saveFeatures.php', strU, function(data){alert(data);}, 'html');
 	},
 };
 

@@ -1,6 +1,6 @@
 /*Системные переменные*/
 var backScript = 'backEnd.php';
-var importWidget = 'callkeeperWidget.html';
+var importWidget = '../feedbackForm/callkeeperWidget.html';
 var linkStyle = 'callkeeperStyle.css';
 var obj = false;
 
@@ -99,13 +99,12 @@ function toggle() {
 			point.onload = function(){
 				R('.callkeeperBillboard').hidden = false;
 				setTimeout(function(){R('.callkeeperBillboard').hidden = true;}, 2000);
-				//alert(this.responseText);
 			}
 		}
 	}
 }
 
-/*Производит кросс-доменный GET-запрос*/
+/*Производит кросс-доменный GET-запрос
 function cRec(method, request) {
 	request = request + '?noCache=' + (new Date()).getTime();
 	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
@@ -120,6 +119,7 @@ function cRec(method, request) {
 	xhr.send();
 	return xhr;
 };
+*/
 
 /*Управляет некоторыми настройками*/
 function features() {
@@ -129,8 +129,8 @@ function features() {
 
 
 
-/*Получает стили виджета*/
-/*(function() {
+/*Получает стили виджета
+(function() {
 	rec2 = cRec('GET', linkStyle);
 	rec2.onload = function() {
 		data = rec2.responseText;
@@ -138,7 +138,8 @@ function features() {
 		widget.innerHTML = data;
 		document.head.appendChild(widget);
 	};
-})();*/
+})();
+*/
 
 /*Получает гипертекст виджета*/
 /*Основная управляющая функция*/

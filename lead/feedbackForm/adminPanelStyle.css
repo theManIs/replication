@@ -12,13 +12,6 @@
 {
 	text-align: center;
 }
-
-.closeButtonFeatures
-{
-	float: right;
-	border-left: 1px solid black;
-}
-
 .callkeeperBillboard
 {
 	margin: 0;
@@ -27,13 +20,11 @@
 	margin-left: calc(50% - 200px);
 	border: 1px dashed black;
 }
-
 .pushD.ButtonS
 {
 	margin-left: calc(50% - 125px);
 	position: static;
 }
-
 .displayInlineBlock
 {
 	display: inline-block;
@@ -44,7 +35,6 @@
 	margin-left: 100px;
 	#margin-left: calc(50% - 200px);
 }
-
 .pushButtonContainer
 {
 	margin-top: 50px;
@@ -52,14 +42,12 @@
 	margin-left: 50px;
 	position: static;
 }
-
 .mainWorkFrame
 {
 	margin-top: 50px;
 	margin-left: calc(50% - 150px);
 	position: static;
 }
-
 .headerHtml.valueTitle
 {
 	cursor: text;

@@ -1,41 +1,26 @@
-<div class="callkeeperMain" style="position: absolute;">
-	<header>
-		<h3 name="callkeeperMain">Отправить сообщение</h3>
-		<div id="firstMessage">
-			<div id="secondMessage">
-				Оставте ваши контактные данные, и мы свяжемся с вами в ближайшее время
-			</div>
-		</div>
-	</header>
-	<section>
-		<input type="text" id="youName" placeholder="Введите ваше имя">
-		<input type="text" id="youMail" placeholder="Введите вашу почту">
-		<label>
-			<select id="youCenter">
-				<option>Дилерский центр 1</option>
-				<option>Дилерский центр 2</option>
-				<option>Дилерский центр 3</option>
-				<option>Дилерский центр 4</option>
-				<option selected>Выберите дилерский центр</option>
-			</select>
-		</label>
-		<label>
-			<select id="youDep">
-				<option>Отдел продаж</option>
-				<option>Отдел маркетинга</option>
-				<option>Отдел персонала</option>
-				<option>Я не знаю какой отдел</option>
-				<option selected>Выберите отдел</option>
-			</select>
-		</label>		
-		<textarea type="text" id="youQuestion" class="callkeeperQuestion"
-			placeholder="Введите ваш вопрос"></textarea>
-		<button id="youSend">Отправить</button>
-		<button id="youClose">Закрыть</button>
-	</section>
+<div class="displayInlineBlock redactForm">
+	<div class="callkeeperMain mainWorkFrame displayInlineBlock">
+		<header>
+			<h3 name="callkeeperMain" id="callkeeperTitleForm"  
+			class="headerHtml valueTitle">Отправить сообщение</h3>
+			<div id="callkeeperSecondMessage" class="textAreaShortPost"
+			>Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время</div>
+		</header>
+		<section>
+			<textarea type="text" id="youQuestion" class="textA blockS"
+				placeholder="Введите ваш вопрос"></textarea>
+			<button id="youSend" class="callK anyB">Отправить</button>
+			<button id="youClose" class="callK anyB closeB featuresS">Закрыть</button>
+		</section>
+	</div>
 </div>
-<button id="youPush">Оставить данные</button>
-<div class="callkeeperBillboard">
-	<h2 class="callkeeperMessage">Сообщение</h2>
-	<p class="callkeeperMessageBody">Вы успешно отправили свои контактные данные</p>
+<div class="displayInlineBlock">	
+	<button id="youPush" class="callK anyB pushD ButtonS">Оставить данные</button>
+</div>
+<div class="containerBillboard displayInlineBlock">
+	<div class="callkeeperBillboard">
+		<h2 class="callkeeperS messageS" id="titleForComplete">Сообщение</h2>
+		<p class="callkeeperS messageBody" id="callMesBody"
+			>Вы успешно отправили свои контактные данные</p>
+	</div>
 </div>

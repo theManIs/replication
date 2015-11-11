@@ -146,6 +146,10 @@ select.classSelectPoint, input.class.InputText
 	margin: 0;	
 	background: none;
 }
+.closeB.featuresS
+{
+	border-left: 1px solid black;
+}
 .callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .textAreaShortPost
 {
 	background-image: -linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
