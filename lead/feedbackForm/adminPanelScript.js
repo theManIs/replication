@@ -92,7 +92,6 @@ var fFunctions = {
 				origin.text(clone.val());
 		};
 		keeperToggle = function(origin, clone) {
-			save = $('.fa.fa-check.fa-2x').parent();
 			origin.click(function(){
 				keeperRedact(origin, clone);
 			});	
@@ -100,14 +99,18 @@ var fFunctions = {
 				if (event.keyCode == 13)
 					keeperSave(origin, clone);
 			});
+			save = origin.is('input') ? origin.parent().parent().find('.fa.fa-check.fa-2x').parent() :
+				origin.parent().find('.fa.fa-check.fa-2x').parent();
+			//console.log(origin);
+			//console.log(origin.is('input'));
 			save.click(function(event) {
 				keeperSave(origin, clone);
 			});					
 		};	
 	},
 	formPaint : function(color) {
-		$('.callkeeperMessage').add('.callkeeperAnyButton').add('.textAreaShortPost')
-			.add('.headerHtmlTitle').css({
+		$('.callkeeperS.messageS').add('.callK.anyB').add('.textAreaShortPost')
+			.add('.headerHtml.valueTitle').css({
 				'background' : color,
 				'background-image' : 
 				'-webkit-linear-gradient(top , rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%)',
@@ -115,7 +118,9 @@ var fFunctions = {
 		$('.color.selector.inner').css('background', color)
 	},
 	colorpickerInit : function() {
-		$('#colorPickerId').ColorPicker({
+		//$('#colorPickerId').ColorPicker({
+		$('#colorpickerHolder').ColorPicker({
+			flat : true,
 			onSubmit: function(hsb, hex, rgb, el) {
 				$(el).val(hex);
 				$('.color.selector.inner').css('background', '#' + hex);
@@ -123,12 +128,14 @@ var fFunctions = {
 				fFunctions.formPaint('#' + hex);
 			},
 			onBeforeShow: function () {
-				$(this).ColorPickerSetColor(fVariables.formColorMaster);
+				//$(this).ColorPickerSetColor(fVariables.formColorMaster);
+				$(this).ColorPickerSetColor(this.value);
 			},
 			onShow : function() {
 				$('.colorpicker').css({'top':'50px','left':'50px',});
 			},
-		}).bind('mouseup', function(){
+		//}).bind('mouseup', function(){
+		}).bind('keyup', function(){	
 			$(this).ColorPickerSetColor(this.value);
 		})
 		$('.color.selector').click(function(){
@@ -138,6 +145,7 @@ var fFunctions = {
 	},
 	sendToServer : function() {
 		var paramsLine = [];
+		paramsLine.push(['color', fVariables.formColorMaster]);
 		paramsLine.push(['title', $('#callkeeperTitleForm').text()]);
 		paramsLine.push(['notice', $('#callkeeperSecondMessage').text()]);
 		paramsLine.push(['question', $('#youQuestion').attr('placeholder')]);

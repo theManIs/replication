@@ -1,25 +1,11 @@
-/*#callkeeperYouNameClone, #callkeeperYouMailClone, #callkeeperQuestionClone, #callkeeperTitleFormClone,
-#callkeeperSecondMessageClone
+.smartEditForm, .smartEdit.formStyle
 {
-	position: absolute;
-	display: none;
-}*/
-
-/*#callkeeperTitleFormClone
-{
-	width: 100%;
-	height: 35px;
-	text-align: center;
-}*/
-
-.smartEditForm
-{
-	#position: absolute;
 	border: 0px dashed black;
 	display: none;
 	background: rgba(0,0,0, .1);
 	font-weight: 900;
 	color: rgba(255, 0, 0, .5);
+	outline: 0px solid black;
 }
 
 .callkeeperTextAlignCenter
@@ -42,7 +28,7 @@
 	border: 1px dashed black;
 }
 
-.pushButtonData
+.pushD.ButtonS
 {
 	margin-left: calc(50% - 125px);
 	position: static;
@@ -74,12 +60,12 @@
 	position: static;
 }
 
-.headerHtmlTitle
+.headerHtml.valueTitle
 {
 	cursor: text;
 }
 
-.headerHtmlTitle.smartEditForm
+.headerHtml.valueTitle.smartEditForm
 {
 	padding: 0px;
 	cursor: default;
@@ -127,7 +113,7 @@
 	font-weight: 900;
 }
 
-.textAreaStyle
+.textA.blockS
 {
 	height: 80px;
 }
@@ -138,7 +124,7 @@ figure.dynamicIcon
 	height: auto;
 	position: absolute;
 	background: none;
-	margin-left: 310px;
+	margin-left: 300px;
 	margin-top: 0;
 }
 figure.dynamicIcon:hover
@@ -148,7 +134,7 @@ figure.dynamicIcon:hover
 figure.bluePhone
 {
 	color: darkblue;
-	margin-left: -50px;
+	margin-left: -150px;
 }
 figure.redCross
 {	
@@ -157,7 +143,19 @@ figure.redCross
 figure.greenCheck
 {	
 	color: green;
-	margin-left: -150px;
+	margin-left: -50px;
+}
+figure.greenCheckMiddle
+{	
+	color: green;
+	margin-top: 25px;
+	margin-left: -50px;
+}
+figure.greenCheckRight
+{	
+	color: green;
+	margin-top: 25px;
+	margin-left: 300px;
 }
 div.blockContainerElement i.fa.fa-2x
 {
@@ -168,7 +166,6 @@ figure.grayMail
 	color: gray;
 	margin-left: -100px;
 }
-
 div.callkeeper.background.mask
 {
 	z-index: 100;
@@ -186,22 +183,9 @@ div.callkeeper.background.mask
 	background-image: 
 		-webkit-linear-gradient(top , rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, 0) 80%);
 }
-
 div.callkeeper.container.input
 {
 	padding: 0;
-}
-
-input.classInputText , select.classSelectPoint
-{
-	width: 100%;
-	height: 100%;
-	margin: 0;	
-	background: none;
-}
-select.classSelectPoint
-{
-	#padding: 0;
 }
 div.color.selector, div.color.selector.inner, div.color.selector.border
 {
@@ -232,12 +216,63 @@ div.color.selector.border
 	background-image: url(../extensions/colorpicker/images/select2.png);
 	background-size: 60px;
 }
-div.save.button.type
+div.save.button.type, div.save.button.type button
 {
+	margin-left: calc(50% - 100px);
+	width: 220px;
+	height: 50px;
+	font: 18px verdana;
 	margin-top: 15px;
 	text-align: center;
 }
 div.picker.little.box
 {
 	margin-left: 50px;
+}
+.displayInlineBlock.redactForm
+{
+	width: 600px;
+}
+.smartEdit.formStyle.paddingNull
+{
+	border: 0px;
+	outline: 0;
+	border-bottom: 1px solid black;
+	border-radius: 0;
+	padding-bottom: 8px;
+	height: 36px;
+}
+div.colorpicker_hex
+{
+	display: none;
+}
+.textA.blockS.adminTextarea
+{
+	font-weight: 900;
+	height: 84px;
+	margin: 0;
+	padding: 15px;
+	width: 300px;
+}
+.callkeeperS.messageS
+{
+	padding: 0;
+	height: 36px;
+	border-bottom: 1px solid black;
+}
+#colorpickerHolder input[type="text"]
+{
+	height: 20px;
+	vertical-align: top;
+	width: 30px;
+	padding-bottom: 5px;
+	outline: none;
+	transition: none;
+	border: none;
+	box-shadow: none;
+}
+#colorpickerHolder .colorpicker_field
+{
+	#height: 40px;
+	#background-repeat: none;
 }
