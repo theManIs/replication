@@ -171,10 +171,6 @@ div.callkeeper.background.mask
 	background-image: 
 		-webkit-linear-gradient(top , rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, 0) 80%);
 }
-div.callkeeper.container.input
-{
-	padding: 0;
-}
 div.color.selector, div.color.selector.inner, div.color.selector.border
 {
 	width: 60px;

@@ -27,4 +27,5 @@ function write_message(array $arr) {
 	echo 'Вы успешно записали строку номер ' . $script->pdo->lastInsertId();
 }
 */
-var_dump($_POST);
+var_dump($_REQUEST);
+echo 'Hooray!';

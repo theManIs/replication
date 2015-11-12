@@ -1,22 +1,10 @@
 var fVariables = {
 	countInputField: 0,
 	countSelectMenu: 0,
-	formColorMaster: 'skyblue',
+	formColorMaster: 'coral',
 	inputFieldId : 'inputFieldId',
 	selectMenuId : 'selectMenuId',
-	idPull : {
-		title : ['callkeeperTitleForm', 'callkeeperTitleFormClone'],
-		notice : ['callkeeperSecondMessage', 'callkeeperSecondMessageClone'],
-		question : ['youQuestion', 'callkeeperQuestionClone'],
-		send : ['youSend', 'callkeeperYouSendClone'],
-		close : ['youClose', 'callkeeperYouCloseClone'],
-		push : ['youPush', 'callYouPushClone'],
-		tComplete : ['titleForComplete', 'titleForCompleteClone'],
-		mComplete : ['callMesBody', 'callMesBodyClone'],
-		fields : [],
-		selects : [],
-	},
-	
+	formToken : 123456,
 };
 var fFunctions = {
 	addField : function(before, addClass) {			
@@ -27,8 +15,7 @@ var fFunctions = {
 			$(blockContainer.find('input')[1]).attr('id', nowId).attr('placeholder', 'Новое поле');
 			before.before(blockContainer);
 			eval("keeperToggle($('#" + nowId + "'), $('#" + nowId + "Clone'))");
-			$('.fa.fa-times.fa-2x').parent().click(function(event) {$(this).parent().remove();});			
-			fVariables.idPull.fields.push([nowId, nowId + 'Clone']);
+			$('.fa.fa-times.fa-2x').parent().click(function(event) {$(this).parent().remove();});
 		}, 'html');
 	},
 	init : function() {		
@@ -60,7 +47,6 @@ var fFunctions = {
 			}
 			before.before(blockContainer);
 			$('.fa.fa-times.fa-2x').parent().click(function(event) {$(this).parent().remove();});
-			fVariables.idPull.selects.push(nowId);
 		}, 'html');
 	},
 	changes : function() {
@@ -153,89 +139,35 @@ var fFunctions = {
 		});
 		return this;
 	},
-	l : function(l) {
-		return console.log(l);
-	},
-	dgebi : function(id) {
-		return document.getElementById(id);;
-	},
-	dce : function(e) {
-		return document.createElement(e);
-	},
-	ncnt : function(elem) {
-		return elem.cloneNode(true);
-	}, 	
-	pac : function(parent, child) {
-		parent.appendChild(child);
-		return;
-	},
-	buildNode : function(elem, name) {
-		for (i = 0; i < name.length; i++) {
-			var alias = 'fVariables.idPull.' + name[i] + '[0]';
-			this.pac(elem, this.ncnt(this.dgebi(eval(alias))));
-		}
-		return;
-	},
-	buildFields : function() {
-		var section = this.dce('section');
-		var fields = fVariables.idPull.fields;
-		for (i = 0; i < fields.length; i++) {
-			if ($(eval(fields[i][0]))) {
-				var div = this.dce('div');
-				div.className = 'callkeeper container input newFieldForm';
-				var nick = 'fVariables.idPull.fields[' + i + '][0]';
-				this.pac(div, this.ncnt(this.dgebi(eval(nick))));
-				this.pac(section, div);
-			}
-		}
-		section = this.buildSelects(section);
-		this.buildNode(section, ['question', 'send', 'close']);
-		return section;
-	},
-	buildSelects : function(section) {	
-		var selects = fVariables.idPull.selects;
-		for (i = 0; i < selects.length; i++) {
-			if ($(eval(selects[i]))) {
-				var div = this.dce('div');
-				div.className = 'callkeeper container input newFieldForm';
-				var nick = 'fVariables.idPull.selects[' + i + ']';
-				this.pac(div, this.ncnt(this.dgebi(eval(nick))));
-				this.pac(section, div);
-			}
-		}		
-		return section;
-	},
 	sendToServer : function() {
-		var idPull = fVariables.idPull;
-		var header = this.dce('header');
-		var wdgt = this.dce('div');
-		var cBill = this.dce('div');
-		var bboard = this.dce('div');
-		var dvEl = this.dce('div');
-		var push = this.dce('div');		
-		section = this.buildFields();
-		
-		dvEl.className = 'callkeeperMain mainWorkFrame displayInlineBlock';
-		dvEl.id = 'mainFrameForm';
-		cBill.className = 'callkeeperBillboard';
-		push.className = 'displayInlineBlock';
-		bboard.className = 'containerBillboard displayInlineBlock';
-		wdgt.className = 'displayInlineBlock redactForm';		
-		
-		this.buildNode(cBill, ['tComplete', 'mComplete']);
-		this.buildNode(push, ['push']);		
-		this.buildNode(header, ['title', 'notice']);
-		
-		this.pac(dvEl, header);
-		this.pac(dvEl, section);
-		this.pac(bboard, cBill);
-		this.pac(wdgt, dvEl);
-		
-		push =  $('<div>').html(push).html();
-		wdgt = $('<div>').html(wdgt).html();
-		bboard = $('<div>').html(bboard).html();
-		param = 'form_str=' + bboard + push + wdgt + '&form_token=' + form_token;
-		$.post('saveFeatures.php', param, function(data){alert(data);}, 'html');
+		var paramsLine = [];
+		paramsLine.push(['color', fVariables.formColorMaster]);
+		paramsLine.push(['title', $('#callkeeperTitleForm').text()]);
+		paramsLine.push(['notice', $('#callkeeperSecondMessage').text()]);
+		paramsLine.push(['question', $('#youQuestion').attr('placeholder')]);
+		paramsLine.push(['send', $('#youSend').text()]);
+		paramsLine.push(['close', $('#youClose').text()]);
+		paramsLine.push(['push', $('#youPush').text()]);
+		paramsLine.push(['tComplete', $('#titleForComplete').text()]);
+		paramsLine.push(['complete', $('#callMesBody').text()]);
+		for (i = 0; i < fVariables.countInputField; i++) {
+			var idName = $('#' + fVariables.inputFieldId + i);
+			if (idName)
+				paramsLine.push(['field' + i, idName.attr('placeholder')]);
+		}
+		for (i = 0; i < fVariables.countSelectMenu; i++) {
+			var idName = $('#' + fVariables.selectMenuId + i);
+			if (idName) {
+				var set = ['select' + i, []];
+				for (b = 0; b < idName.find('option').size(); b++) {
+					set[1].push(['option' + b, $(idName.find('option')[b]).text()]);
+				}
+				paramsLine.push(set);			
+			}
+		}
+		paramsLine = $.toJSON(paramsLine);
+		var strU = 'form_json=' + paramsLine + '&form_token=' + fVariables.formToken;
+		$.post('saveFeatures.php', strU, function(data){alert(data);}, 'html');
 	},
 };
 
@@ -248,5 +180,4 @@ $(document).ready(function(){
 	fFunctions.init();
 	fFunctions.changes();
 	fFunctions.afterInit();
-	form_token = '323232';
 });

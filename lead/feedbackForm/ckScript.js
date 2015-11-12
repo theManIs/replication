@@ -1,62 +1,23 @@
-/*Системные переменные*/
-var backScript = 'backEnd.php';
-var importWidget = '../feedbackForm/callkeeperWidget.html';
-var linkStyle = 'callkeeperStyle.css';
-var obj = false;
+formWidget = {
+	//formPath : '../feedbackForm/callkeeperWidget.html',
+	formPath : '../feedbackForm/saveFeatures.php',
+	stylePath : '../feedbackForm/callkeeperStyle.css',
+	backEnd : '../feedbackForm/backEnd.php',
+	
+	loadModel : function(it) {
+		var response = getReq(it);
+		response.addEventListener('load', function() {
+			document.body.innerHTML = document.body.innerHTML + response.responseText;
+		});
+		return response;
+	},
+	load : function() {
+		widget = this.loadModel(this.formPath + '?form_token=' + form_token);
+		widget.addEventListener('load', function() {toggle();});
+	},
+};
 
-/*Эмулятор доступа к объекту DOM*/
-function R(selector) {
-	if (selector[0] === '#') {
-		if (kit = document.querySelector(selector))
-			return kit;
-		else
-			return false;
-	} else {
-		if(kit = document.querySelectorAll(selector)) {
-			if (typeof kit[0] == 'undefined')
-				return false;
-			else {
-				if (kit[1])	
-					return kit;
-				else 
-					return kit[0];
-			}
-		} else
-			return false;
-	}
-}
-
-/*Компонент drag&drop */
-function mousedown(ev) {
-	obj = R('.' + ev.target.getAttribute('name'));
-	if(obj) {
-		X = ev.x;
-		Y = ev.y;
-		objLeft = parseInt(obj.style.left) ? parseInt(obj.style.left) : obj.offsetLeft;
-		objTop = parseInt(obj.style.top) ? parseInt(obj.style.top) : obj.offsetTop;
-	}
-	return false;
-}
-
-function mousemove(ev) {
-	if(obj) {
-		obj.style.left = objLeft + event.clientX-X + document.body.scrollLeft + 'px';
-		obj.style.top = objTop + event.clientY-Y + document.body.scrollTop + 'px';
-		return false;
-	}
-}
-
-function mouseup() {
-	obj = false;
-}
-
-/*Установка обработчиков событий для drag&drop*/
-document.onmousedown = function(event) {
-	mousedown(event);
-	return true;
-}
-document.onmousemove = mousemove;
-document.onmouseup = mouseup; 
+formWidget.load();
 
 /*Навешивает обработчики событий на виджет*/
 function toggle() {
@@ -92,16 +53,31 @@ function toggle() {
 			mes = R('#youQuestion').value;
 			dep = R('#youDep').value;
 			center = R('#youCenter').value;
-			request = 'backEnd.php?name=' + name + '&mail=' + mail + '&mes=' + mes;
-			request = request + '&dep=' + dep + '&center=' + center + '&token=' + token;
-			request = request + '&write=true';
-			point = cRec('GET', request);
+			request = {
+				name : name,
+				mail : mail,
+				mes : mes,
+				dep : dep,
+				center : center,
+				token :form_token,
+				write : 'true',
+			}
+			request = JSON.stringify(request);
+			point = postReq(formWidget.backEnd, request);
 			point.onload = function(){
+				alert(point.responseText);
 				R('.callkeeperBillboard').hidden = false;
 				setTimeout(function(){R('.callkeeperBillboard').hidden = true;}, 2000);
 			}
 		}
 	}
+}
+formGetData = {
+	fields : function() {
+		length = (flds = R('.class.InputText.newFieldForm')) ? 1 : 0;
+		length = (length == 0) ? length : (length = (flds.length) ? flds.length : length);
+		flds = R('#' + flds.id);		
+	},
 }
 
 /*Производит кросс-доменный GET-запрос
@@ -123,8 +99,9 @@ function cRec(method, request) {
 
 /*Управляет некоторыми настройками*/
 function features() {
-	R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;
 	R('.callkeeperBillboard').style.marginTop = window.innerHeight/2 - R('.callkeeperBillboard').offsetHeight/2;
+	R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;
+	
 }
 
 
@@ -143,6 +120,7 @@ function features() {
 
 /*Получает гипертекст виджета*/
 /*Основная управляющая функция*/
+/*
 (function() {
 	rec = cRec('GET', importWidget);
 	rec.onload = function() {
@@ -150,4 +128,4 @@ function features() {
 		toggle();
 	};
 })();
-
+*/

@@ -150,6 +150,10 @@ select.classSelectPoint, input.class.InputText
 {
 	border-left: 1px solid black;
 }
+div.callkeeper.container.input
+{
+	padding: 0;
+}
 .callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .textAreaShortPost
 {
 	background-image: -linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);

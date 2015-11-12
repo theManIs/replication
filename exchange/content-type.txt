@@ -1,0 +1,6 @@
+encodeURIComponent();
+formData.append(name, value)
+formData = new FormData(form);
+setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+setRequestHeader('Content-type', 'application/json; charset=utf-8');
+setRequestHeader('Content-type', 'text-plain; charset=utf-8');
