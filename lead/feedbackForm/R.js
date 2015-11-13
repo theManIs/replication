@@ -1,4 +1,3 @@
-/*Эмулятор доступа к объекту DOM*/
 function R(selector) {
 	if (selector[0] === '#') {
 		if (kit = document.querySelector(selector))
@@ -19,3 +18,30 @@ function R(selector) {
 			return false;
 	}
 }
+
+R.counter = function(kit, callback) {
+	var eachCounter = 0;
+	while (eachRow = kit[eachCounter]) {
+		callback(eachCounter);
+		eachCounter++;
+	}
+};
+
+R.addStyle = function(link) {
+	var tag = document.createElement('link');
+	tag.rel = 'stylesheet';
+	tag.type = 'text/css';
+	tag.href = link;
+	document.head.appendChild(tag);
+};
+
+R.addScript = function(src) {
+	var tag = document.createElement('script');
+	tag.language= 'javascript';
+	tag.src = src;
+	document.head.appendChild(tag);
+};
+
+R.log = function(log) {
+	return console.log(log);
+};

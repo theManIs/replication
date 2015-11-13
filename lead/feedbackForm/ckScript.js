@@ -1,9 +1,14 @@
 formWidget = {
-	//formPath : '../feedbackForm/callkeeperWidget.html',
 	formPath : '../feedbackForm/saveFeatures.php',
 	stylePath : '../feedbackForm/callkeeperStyle.css',
 	backEnd : '../feedbackForm/backEnd.php',
+	xhr : '../feedbackForm/xhr.js',
+	R : '../feedbackForm/R.js',
 	
+	beforeLoad : function() {
+		R.addStyle(this.stylePath);
+		return this;
+	},
 	loadModel : function(it) {
 		var response = getReq(it);
 		response.addEventListener('load', function() {
@@ -15,22 +20,26 @@ formWidget = {
 		widget = this.loadModel(this.formPath + '?form_token=' + form_token);
 		widget.addEventListener('load', function() {toggle();});
 	},
+	features : function() {
+		R('.callkeeperBillboard').style.marginTop = window.innerHeight/2 
+			- R('.callkeeperBillboard').offsetHeight/2;
+		R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;	
+	},
 };
 
-formWidget.load();
+formWidget.beforeLoad().load();
 
-/*Навешивает обработчики событий на виджет*/
 function toggle() {
-	lable = document.querySelector('#youPush');
-	feature = document.querySelector('.callkeeperMain');
-	clsr = document.querySelector('#youClose');
-	send = R('#youSend');
+	var lable = document.querySelector('#youPush');
+	var feature = document.querySelector('.callkeeperMain');
+	var clsr = document.querySelector('#youClose');
+	var send = R('#youSend');
 	if (lable) {
 		lable.onclick = function() {
 			lable.hidden = true;
 			feature.hidden = false;
 		};
-		features();
+		formWidget.features();
 	}
 	if (feature) {
 		feature.hidden = true;
@@ -47,23 +56,18 @@ function toggle() {
 	if (send) {
 		send.onclick = function() {
 			feature.hidden = true;
-			lable.hidden = false;
-			name = R('#youName').value;
-			mail = R('#youMail').value;
-			mes = R('#youQuestion').value;
-			dep = R('#youDep').value;
-			center = R('#youCenter').value;
+			lable.hidden = false;			
+			var fields = formGetData.fields();
+			var selects = formGetData.selects();
+			var textarea = formGetData.textarea();
 			request = {
-				name : name,
-				mail : mail,
-				mes : mes,
-				dep : dep,
-				center : center,
-				token :form_token,
-				write : 'true',
+				fields : fields,
+				selects : selects,
+				textarea : textarea,
+				token : form_token,
 			}
-			request = JSON.stringify(request);
-			point = postReq(formWidget.backEnd, request);
+			request = JSON.stringify(request) + '&form_token=' + form_token;
+			var point = postReq(formWidget.backEnd, request);
 			point.onload = function(){
 				alert(point.responseText);
 				R('.callkeeperBillboard').hidden = false;
@@ -72,60 +76,41 @@ function toggle() {
 		}
 	}
 }
+
 formGetData = {
 	fields : function() {
-		length = (flds = R('.class.InputText.newFieldForm')) ? 1 : 0;
-		length = (length == 0) ? length : (length = (flds.length) ? flds.length : length);
-		flds = R('#' + flds.id);		
+		this.f = this.build('.class.InputText.newFieldForm', this.cdfields);
+		delete kit;
+		delete rec;
+		return this.f;
+	},
+	cdfields : function(i) {
+		rec.push([[R(formGetData.fCount + i).placeholder], [R(formGetData.fCount + i).value]]);
+	},
+	build : function(indifier, callback) {
+		var kit = R(indifier);
+		rec = [];
+		var length = (!kit) ? 0 : (kit.length) ? kit.length : 1;
+		if (length !== 0) {			
+			this.fCount = (length !== 0) ? '#' + kit[0].id.substr(0, 12) : false;
+			if (length === 1) 
+				rec.push([[kit[0].innerText], [kit.value]]);
+			else
+				R.counter(kit, callback);
+		return rec;
+		}		
+	},
+	cbselects : function(i) {
+		var nameSel = kit[i][0].innerText;
+		rec.push([[nameSel], [kit[i].value]]);		
+	},
+	selects : function() {
+		this.s = this.build('select.classSelectPoint.newFieldForm', this.cbselects);
+		delete kit;
+		delete rec;
+		return this.s;
+	},
+	textarea : function() {
+		return this.a = R('#youQuestion').value;
 	},
 }
-
-/*Производит кросс-доменный GET-запрос
-function cRec(method, request) {
-	request = request + '?noCache=' + (new Date()).getTime();
-	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
-	var xhr = new XHR();
-	xhr.open(method, request, true);
-	xhr.onerror = function() {
-		alert('Ошибка' + this.status);
-	}
-	xhr.ontimeout = function() {
-		alert('Извините, запрос превысил максимальное время');
-	}
-	xhr.send();
-	return xhr;
-};
-*/
-
-/*Управляет некоторыми настройками*/
-function features() {
-	R('.callkeeperBillboard').style.marginTop = window.innerHeight/2 - R('.callkeeperBillboard').offsetHeight/2;
-	R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;
-	
-}
-
-
-
-/*Получает стили виджета
-(function() {
-	rec2 = cRec('GET', linkStyle);
-	rec2.onload = function() {
-		data = rec2.responseText;
-		widget = document.createElement('style');
-		widget.innerHTML = data;
-		document.head.appendChild(widget);
-	};
-})();
-*/
-
-/*Получает гипертекст виджета*/
-/*Основная управляющая функция*/
-/*
-(function() {
-	rec = cRec('GET', importWidget);
-	rec.onload = function() {
-		document.body.innerHTML = document.body.innerHTML + rec.responseText;
-		toggle();
-	};
-})();
-*/

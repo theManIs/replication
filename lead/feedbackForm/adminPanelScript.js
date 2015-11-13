@@ -126,6 +126,14 @@ var fFunctions = {
 			.add('.headerHtml.valueTitle').css({
 				'background' : color,
 				'background-image' : 
+				'-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%)',
+				'background-image' : 
+				'-o-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%)',
+				'background-image' : 
+				'-ms-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%)',
+				'background-image' : 
+				'-moz-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%)',
+				'background-image' : 
 				'-webkit-linear-gradient(top , rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%)',
 		});		
 		$('.color.selector.inner').css('background', color)

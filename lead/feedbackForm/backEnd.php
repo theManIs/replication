@@ -1,31 +1,19 @@
 <?php
 include 'config.php';
-/*
-echo 'Ваше имя: ' . $_GET['name'];
-echo ' Почта : ' . $_GET['mail'];
-echo ' Сообщение: ' . $_GET['mes'];
-echo ' Центр: ' . $_GET['center'];
-echo ' Отдел: ' . $_GET['dep'];
-*/
+//$_POST['request'] =  '"{"fields":[[["Новое поле"],[""]],[["Новое поле"],[""]],[["Новое поле"],[""]]],"selects":[[["Название"],["Название"]],[["adfa"],["adfa"]]],"textarea":"","token":"345345","write":"true"}";';
+//$_POST['form_token'] = '345345';
+$form_message = isset($_POST['request']) ?  $_POST['request'] : false;
+$form_token = isset($_POST['form_token']) ? $_POST['form_token'] : false;
 
-/*
-$query_string = array();
-parse_str($_SERVER['QUERY_STRING'], $query_string);
-if (isset($action)) {
-} elseif (isset($query_string['write']) && $query_string['write'] == true) {
-	write_message($query_string);
+function writeUnit() {
+	echo 'Вы успешно записали строку номер ' . write(func_get_arg(0), func_get_arg(1));
 }
-function write_message(array $arr) {
-	foreach ($arr as &$v)
-		$v = htmlentities($v, ENT_QUOTES | ENT_DISALLOWED, 'UTF-8');
-	extract($arr);
+function write() {
 	$script = M_sql::Q();
-	$script->insert('message_in');
-	$script->set('token', 'name', 'mail', 'message', 'service', 'department');
-	$script->bind($token, $name, $mail, $mes, $center, $dep);
-	$script->send();
-	echo 'Вы успешно записали строку номер ' . $script->pdo->lastInsertId();
+	$script->insert('message_in')->set('token', 'message');
+	$script->bind(func_get_arg(1), func_get_arg(0))->send();
+	return $script->pdo->lastInsertId();
 }
-*/
-var_dump($_REQUEST);
-echo 'Hooray!';
+if ($form_message !== false && $form_token !== false) {
+	writeUnit($form_message, $form_token);
+}

@@ -71,8 +71,9 @@
 	
 }
 
-.redactListScroll
+div.redactMode.listScroll
 {
+	z-index: 500;
 	display: none;
 	left: 0;
 	top: 0;
@@ -91,21 +92,14 @@
 	text-align: center;
 }
 
-.clickAcceptButton
+button.clickA.buttonL
 {
 	margin-left: calc(50% - 75px);
 }
-
-.itemListScrollHeader
+.itemList.scrollElem.scrollHeader
 {
 	font-weight: 900;
 }
-
-.textA.blockS
-{
-	height: 80px;
-}
-
 figure.dynamicIcon
 {
 	width: auto;
@@ -115,9 +109,9 @@ figure.dynamicIcon
 	margin-left: 300px;
 	margin-top: 0;
 }
-figure.dynamicIcon:hover
+figure.dynamicIcon:hover, .colorpicker_submit:hover
 {
-	transform: scale(1.5, 1.5);
+	transform: scale(1.7, 1.7);
 }
 figure.bluePhone
 {
@@ -144,6 +138,22 @@ figure.greenCheckRight
 	color: green;
 	margin-top: 25px;
 	margin-left: 300px;
+}
+figure.blackAsteriskMiddle 
+{
+	color: black;
+	margin-top: 25px;
+	margin-left: -100px;
+}
+figure.blackAsteriskSelect
+{
+	color: black;
+	margin-left: -50px;
+}
+figure.blackAsterisk
+{
+	color: black;
+	margin-left: -200px;
 }
 div.blockContainerElement i.fa.fa-2x
 {
@@ -215,7 +225,7 @@ div.picker.little.box
 }
 .displayInlineBlock.redactForm
 {
-	width: 600px;
+	width: 700px;
 }
 .smartEdit.formStyle.paddingNull
 {

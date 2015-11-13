@@ -13,8 +13,11 @@ window.L = {
 		parent.appendChild(child);
 		return;
 	},
-	l : function(l) {
-		return console.log(l);
+	log : function(log) {
+		return console.log(log);
+	},
+	dir : function(dir) {
+		return console.dir(dir);
 	},
 	dqsa : function(selector) {
 		if (selector[0] === '#') {
@@ -37,3 +40,8 @@ window.L = {
 		}
 	},
 }
+L.fr = function(size, callback) {
+	for (i = 0; i < size; i++) {
+		callback(i);
+	}
+};

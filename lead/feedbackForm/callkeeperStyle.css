@@ -37,7 +37,7 @@
 	font: 14px Verdana;
 	background: #399CE3;
 }
-.itemListScroll, .itemListScrollHeader, .newFieldForm, .textA.blockS
+input.itemList.scrollElem, .itemListScrollHeader, .newFieldForm, .textA.blockS
 {
 	padding: 4px 4px 4px 10px;
 	width: 270px;
@@ -153,6 +153,10 @@ select.classSelectPoint, input.class.InputText
 div.callkeeper.container.input
 {
 	padding: 0;
+}
+.textA.blockS
+{
+	height: 80px;
 }
 .callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .textAreaShortPost
 {
