@@ -31,6 +31,8 @@
     },
     finish: function(player) {
       // each sound
+	  //player.actions.stop();
+	  console.dir(player);
       console.log('finish', player);
     },
     pause: function(player) {
@@ -39,6 +41,7 @@
     error: function(player) {
       console.log('error', player);
     }
+	
     end: function(player) {
       // end of playlist
       console.log('end', player);
@@ -287,7 +290,8 @@
         },
 
         onfinish: function() {
-
+			this.stop();
+		/*
           var lastIndex, item;
 
           utils.css.remove(dom.o, 'playing');
@@ -325,7 +329,7 @@
             callback('end');
 
           }
-
+		*/
         }
 
       });
@@ -338,7 +342,7 @@
 
       // if a link is OK, play it.
 
-      if (soundManager.canPlayURL(link.href)) {
+      if (link && link.href && soundManager.canPlayURL(link.href)) {
 
         // if there's a timer due to failure to play one track, cancel it.
         // catches case when user may use previous/next after an error.

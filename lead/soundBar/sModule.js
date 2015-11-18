@@ -16,7 +16,6 @@ supportFunction = {
 			event.preventDefault();
 			supportFunction.lightRow(i, sound);
 			$('.sm2-bar-ui').css('display', 'inline-block');
-			console.dir(sm2BarPlayers[0]);
 			sm2BarPlayers[0].playlistController.playItemByOffset(i + 1);
 		});
 	},
@@ -33,7 +32,7 @@ supportFunction = {
 		});
 	},
 	nextStep: function(sound) {
-		$('a[href="#next"]').add('a[href="#prev"]').click(function(){
+		$('a[href="#next"]').add('a[href="#prev"]').click(function(event){
 			var side = event.target.href.substr(-4);
 			var the = $('tr.success').find('a[href$=".mp3"].playlink').attr('recordname');
 			var playlist = $($('.sm2-playlist-bd')[1]).find('a');
@@ -44,9 +43,14 @@ supportFunction = {
 				}
 				$('tr.success').removeClass('success');
 			}
-			next = (side === 'next') ? next + 1 : next - 1;
+			
+			if (side === 'next')
+				next = (sound[next + 1]) ? next + 1 : next;
+			else
+				next = (sound[next - 1]) ? next - 1 : next;
+			
 			var recordname = $(sound[next]).attr('recordname');
-			$('*[recordname="' + recordname + '"').parent().parent().addClass('success');
+		$('*[recordname="' + recordname + '"]').parent().parent().addClass('success');
 			return true;
 		});
 	},
